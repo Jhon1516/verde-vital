@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTAL DE VENTAS - VERDE VITAL</title>
+    <title>EN-LO-NATURAL- ESTA-LO NATURAL-VERDE VITAL</title>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -18,7 +18,7 @@
             --secondary-color: #2ecc71; /* Verde esmeralda */
             --accent-color: #e74c3c; /* Rojo para acentos/advertencias */
             --background-light: #ecf0f1; /* Gris claro de fondo */
-            --text-dark: #2c3e50; /* Gris oscuro para texto */
+            --text-dark: #2c503d; /* Gris oscuro para texto */
             --whatsapp-green: #25D366; /* Verde WhatsApp */
             --whatsapp-green-dark: #1DA851; /* Verde WhatsApp más oscuro */
             --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -26,8 +26,144 @@
             --button-hover-brightness: 1.1; /* Ligero brillo al pasar el ratón */
             --dark-green-footer: #0A3D0A; /* Nuevo color: Verde Oscuro para el pie de página */
             --footer-text-light: #F0F0F0; /* Color de texto claro para el pie de página */
-        }
+            --footer-text-light: #F0F0F0; /* Color de texto claro para el pie de página */
+            --main-bg-cover: #0c140a; /* Verde esmeralda para la portada */
+         --secondary-color: rgb(65, 207, 65);
+         /* otras variables que ya tienes */
+            .product-section {
+            background-color: var(--background-light);
+            padding: 100px 90px;
+    
+}
 
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.product-item h2 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--accent-color, #2ecc71);
+    margin-bottom: 15px;
+}
+
+.whatsapp-button {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+@media screen and (max-width: 600px) {
+    .product-item {
+        max-width: 90%;
+    }
+
+    .product-item h2 {
+        font-size: 1.2rem;
+    }
+
+    .product-price {
+        font-size: 1rem;
+    }
+}
+    }       
+
+.review-section {
+
+  font-family: sans-serif;
+}
+
+.review-section p {
+  margin: 10px 0;
+}
+
+.review-form {
+  margin-top: 10px;
+}
+
+.review-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.review-form textarea,
+.review-form input[type="text"],
+.review-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: #4caf50;
+}
+
+.remember {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.review-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background-color: #43a047;
+}
         body {
             margin: 0;
             padding: 0;
@@ -135,7 +271,7 @@
         }
 
         .product-item img {
-            max-width: 100%;
+            max-width: 280%;
             border: 3px solid var(--secondary-color);
             border-radius: var(--border-radius);
             display: block;
@@ -1019,22 +1155,22 @@
 <body id="top">
 
     <div id="entranceDoor" class="entrance-door">
-        <h2>PORTAL DE VENTAS</h2>
         <span class="brand-name">VERDE VITAL</span>
         <button id="enterButton">ENTRAR</button>
     </div>
 
-    <div id="mainContent" class="content-hidden">
+  <div id="mainContent" class="content-hidden" style="background-color: rgb(238, 171, 144);"></div>
+
         <header>
             <nav>
                 <a href="#top">Inicio</a>
                 <a href="#oportunidad-section">Oportunidad de Negocio</a>
                 <a href="#atomy-products-section">Otros Productos</a>
             </nav>
-            <h1>PORTAL DE VENTAS <br> <span style="color: var(--secondary-color);">VERDE VITAL</span></h1>
+            <h1><br> <span style="color: var(--secondary-color);">VERDE VITAL</span></h1>
 
             <div class="search-container">
-                <input type="search" id="productSearch" placeholder="Busca tu producto (ej. Protec Life)">
+                <input type="search" id="productSearch" placeholder="Busca tu producto">
                 <button id="searchButton"><i class="fas fa-search"></i> Buscar Producto</button>
             </div>
         </header>
@@ -1044,11 +1180,12 @@
 
             <div class="sub-detail-section">
                 <div class="sub-detail-header" onclick="toggleSubDetails('why-lifehuni', this)">
-                    <span>¿Por qué usar suplementos naturales LifeHuni?</span>
+                    <span>¿Por qué usar suplementos y productos naturales que ofrecemos en verde vital,  LifeHuni, Atomy entre otros?</span>
                     <span class="arrow">▼</span>
                 </div>
                 <div id="why-lifehuni" class="sub-detail-content">
-                    <p>Los productos **LifeHuni** son de **origen vegetal y ricos en vitaminas**. Estos suplementos no contienen productos químicos potencialmente peligrosos. Cada componente natural se obtiene de **cultivos ecológicos y sostenibles**, siendo amigables con el medio ambiente y garantizando la más alta calidad.</p>
+                    <p>Los productos LifeHuni
+                        son de origen vegetal y ricos en vitaminas. Estos suplementos no contienen productos químicos potencialmente peligrosos. Cada componente natural se obtiene de cultivos ecológicos y sostenibles, siendo amigables con el medio ambiente y garantizando la más alta calidad.</p>
                 </div>
             </div>
 
@@ -1058,13 +1195,19 @@
                     <span class="arrow">▼</span>
                 </div>
                 <div id="care-immune-system" class="sub-detail-content">
-                    <p>Para cuidar el sistema inmunológico, es fundamental mantener **hábitos saludables**. De ello depende que nuestro cuerpo esté preparado y en mejor condición para contrarrestar las enfermedades que podamos contraer. Dentro de las recomendaciones que puedes seguir, se encuentran:</p>
+                    <p>Para cuidar el sistema inmunológico, es fundamental mantener hábitos saludables. De ello depende que nuestro cuerpo esté preparado y en mejor condición para contrarrestar las enfermedades que podamos contraer. Dentro de las recomendaciones que puedes seguir, se encuentran:</p>
                     <ul>
-                        <li>**Hacer ejercicio:** Mantener una vida física activa, incluso practicar algún deporte que mantenga tu cuerpo en movimiento.</li>
-                        <li>**Beber suficiente agua:** Mantenerse hidratado es clave.</li>
-                        <li>**Dormir lo suficiente:** Un cuerpo descansado funciona mejor.</li>
-                        <li>**Evitar alcohol y tabaco:** Reducir o eliminar el consumo de estas sustancias.</li>
-                        <li>**Alimentación balanceada:** Puedes suplementarla con **Protect Life** para mejorar la salud del sistema inmunológico.</li>
+                        <li>Hacer ejercicio:
+                            Mantener una vida física activa, incluso practicar algún deporte que mantenga tu cuerpo en movimiento.</li>
+                        <li>Beber suficiente agua:
+                            Mantenerse hidratado es clave.</li>
+                        <li>Dormir lo suficiente:
+                            Un cuerpo descansado funciona mejor.</li>
+                        <li>Evitar alcohol y tabaco:
+                            Reducir o eliminar el consumo de estas sustancias.</li>
+                        <li>Alimentación balanceada:
+                            Puedes suplementarla con Protect Life
+                            para mejorar la salud del sistema inmunológico.</li>
                     </ul>
                 </div>
             </div>
@@ -1076,22 +1219,33 @@
                 </div>
                 <div id="related-products-summary" class="sub-detail-content">
                     <ul>
-                        <li>**Divi Her:** Suplemento dietario que promueve la **pérdida de peso**, ayuda a controlar el apetito y la ansiedad por comer. Facilita la eliminación de grasa corporal a través de lipólisis.</li>
-                        <li>**Jufres:** Protege nuestra piel de los **rayos solares**, disminuye efectos del envejecimiento, combate la flacidez de la piel en cuello y rostro, mejora la cicatrización de heridas y fortalece el cabello, piel y uñas.</li>
-                        <li>**Life Dig:** Mejora el **sistema digestivo**, ayuda con el estreñimiento crónico, regula los niveles de colesterol y azúcar en la sangre, y combate infecciones digestivas.</li>
-                        <li>**Libi Life:** Mejora la **salud sexual y reproductora**. Funciona como energizante, antidepresivo natural, optimiza el rendimiento en deportistas, mejora la memoria y la salud sexual.</li>
-                        <li>**Protect Life:** Mejora el **sistema inmunológico**, regula el funcionamiento intestinal, ayuda a prevenir el envejecimiento, ayuda en la prevención de algunos tumores y disminuye el acné.</li>
-                        <li>**Ju Vent:** Disminuye la **inflamación y rigidez**, ayuda a cicatrizar heridas, fortalece y recupera el cuerpo después de hacer ejercicio, ayuda en órganos como piel, tendones y cartílagos, y ayuda a formar las células sanguíneas.</li>
-                        <li>**Maca Life:** Ayuda a **regular el ciclo menstrual**, regula los niveles de testosterona, fortalece el sistema óseo e inmunológico, facilita la digestión de las grasas y regula el colesterol.</li>
-                        <li>**Vid Life:** Disminuye el **estreñimiento**, es depurador de la sangre y reparador de la piel, incrementa el vigor y ayuda al balance hormonal, y mejora el funcionamiento de los músculos.</li>
-                        <li>**Agy Fort:** Producto recomendado para **niños, adolescentes** y especialmente personas que practican deportes o desarrollan actividades físicas extenuantes. En general, para personas sanas que desean mejorar su nutrición.</li>
-                        <li>**Gravi Life:** Indicado para todo el **sistema nervioso e inmunológico**, es coadyuvante para tratamiento de cáncer, dolores en general y de articulaciones.</li>
+                        <li><h4>Divi-Her:</h4>
+                            Suplemento dietario que promueve la pérdida de peso, ayuda a controlar el apetito y la ansiedad por comer. Facilita la eliminación de grasa corporal a través de lipólisis.</li>
+                        <li><h4>Jufres:</h4>
+                            Protege nuestra piel de los rayos solares, disminuye efectos del envejecimiento, combate la flacidez de la piel en cuello y rostro, mejora la cicatrización de heridas y fortalece el cabello, piel y uñas.</li>
+                        <li><h4>Life-Dig:</h4>
+                            Mejora el sistema digestivo, ayuda con el estreñimiento crónico, regula los niveles de colesterol y azúcar en la sangre, y combate infecciones digestivas.</li>
+                        <li>h4Libi-Life:</h4>
+                            Mejora la salud sexual y reproductora. Funciona como energizante, antidepresivo natural, optimiza el rendimiento en deportistas, mejora la memoria y la salud sexual.</li>
+                        <li>h4Protect-Life:</h4>
+                            Mejora el sistema inmunológico, regula el funcionamiento intestinal, ayuda a prevenir el envejecimiento, ayuda en la prevención de algunos tumores y disminuye el acné.</li>
+                        <li><h4> Ju-Vent:</h4>
+                            Disminuye la inflamación y rigidez, ayuda a cicatrizar heridas, fortalece y recupera el cuerpo después de hacer ejercicio, ayuda en órganos como piel, tendones y cartílagos, y ayuda a formar las células sanguíneas.</li>
+                        <li><h4> Maca-Life:</h4>
+                            Ayuda a regular el ciclo menstrual, regula los niveles de testosterona, fortalece el sistema óseo e inmunológico, facilita la digestión de las grasas y regula el colesterol.</li>
+                        <li></li><h4> Vid-Life:</h4>
+                            Disminuye el estreñimiento, es depurador de la sangre y reparador de la piel, incrementa el vigor y ayuda al balance hormonal, y mejora el funcionamiento de los músculos.</li>
+                        <li><h4> Agy-Fort:</h4>
+                            Producto recomendado para niños, adolescentes
+                            y especialmente personas que practican deportes o desarrollan actividades físicas extenuantes. En general, para personas sanas que desean mejorar su nutrición.</li>
+                        <li><h4>Gravi-Life:</h4>
+                            Indicado para todo el sistema nervioso e inmunológico, es coadyuvante para tratamiento de cáncer, dolores en general y de articulaciones.</li>
                     </ul>
                 </div>
             </div>
-
+               <h2>Compartir en tus redes</h2>
             <div class="sharing-options" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                <p style="font-weight: bold; color: var(--main-color);">¡Comparte esta información en tus redes!</p>
+                <p style="font-weight: bold; color: var(--main-color);"></p>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=TU_URL_DE_PAGINA" target="_blank" aria-label="Compartir en Facebook" style="text-decoration: none; margin: 0 10px; color: #3b5998; display: inline-flex; align-items: center; font-weight: bold;">
                     <i class="fab fa-facebook-f" style="font-size: 24px; margin-right: 8px;"></i> Facebook
                 </a>
@@ -1115,8 +1269,8 @@
            
 
             <section id="oportunidad-section" class="product-item">
-                <h3>¡Tu Oportunidad de Negocio con Verde Vital!</h3>
-                <img src="https://i.postimg.cc/9XxP91PT/logo-lifehuni-1-600x270.png" alt="Logo LifeHuni - Oportunidad" loading="lazy">
+                
+                <img src="https://i.postimg.cc/4NsY4Byt/Picsart-25-07-03-18-10-43-256.png" alt="Logo LifeHuni - Oportunidad" loading="lazy">
                 <button class="toggle-btn" onclick="toggleDetails('oportunidad-details', this)">🔽 Ver más detalles</button>
                 <div id="oportunidad-details" class="details-content">
                     <p>
@@ -1124,11 +1278,16 @@
                     </p>
                     <h4>¿Por qué unirte a nosotros?</h4>
                     <ul>
-                        <li>**Productos de Impacto:** Ofrece soluciones de salud y bienestar que tus clientes amarán.</li>
-                        <li>**Flexibilidad Total:** Trabaja a tu propio ritmo, desde donde quieras y cuando quieras.</li>
-                        <li>**Ingresos Ilimitados:** Tu esfuerzo se traduce directamente en tus ganancias.</li>
-                        <li>**Soporte y Capacitación:** Te proporcionamos todas las herramientas y el conocimiento necesario para que tengas éxito.</li>
-                        <li>**Comunidad:** Forma parte de una red de emprendedores apasionados por el bienestar.</li>
+                        <li>Productos de Impacto:
+                            Ofrece soluciones de salud y bienestar que tus clientes amarán.</li>
+                        <li>Flexibilidad Total:
+                            Trabaja a tu propio ritmo, desde donde quieras y cuando quieras.</li>
+                        <li>Ingresos Ilimitados:
+                            Tu esfuerzo se traduce directamente en tus ganancias.</li>
+                        <li>Soporte y Capacitación:
+                            Te proporcionamos todas las herramientas y el conocimiento necesario para que tengas éxito.</li>
+                        <li>Comunidad:
+                            Forma parte de una red de emprendedores apasionados por el bienestar.</li>
                     </ul>
                     <p>
                        ¡Es tu momento de tomar el control de tu futuro! Haz clic en el botón de abajo para más información y descubre cómo Verde Vital puede transformar tu vida.
@@ -1140,12 +1299,14 @@
 
             <section class="product-item" id="libi-life-section">
                 <h3>LIBI-LIFE 60 CAP</h3>
-                <img src="https://i.postimg.cc/t4bPDdWx/Libilife-1-scaled.jpg" alt="LIBI-LIFE 60 Cápsulas" loading="lazy">
+                <img src="https://i.postimg.cc/JzHp959k/copilot-image-1751736311199.png" alt="LIBI-LIFE 60 Cápsulas" loading="lazy">
+                
                 <button class="toggle-btn" onclick="toggleDetails('libi-life-details', this)">🔽 Ver más detalles</button>
                 <button class="add-to-cart-btn"
                         data-id="libi-life"
                         data-name="LIBI-LIFE 60 CAP"
                         data-price="81738">
+
                     Añadir al Carrito
                 </button>
 
@@ -1158,62 +1319,42 @@
                             <span class="arrow">▼</span>
                         </div>
                         <div id="libi-life-description" class="sub-detail-content">
-                            <p>LIBI-LIFE 60 CAP es un suplemento dietario. Cuenta con 2 valoraciones de clientes.</p>
-                            <p>Contenido Neto: 60 Tabletas.</p>
-                            <p>Fabricado en Colombia.</p>
+            <h4>Este producto es un suplemento dietario. No es un medicamento y no suple una alimentación equilibrada. LIBILIFE 60 CAP cantidad</h4>             
+            <li>Extracto de Guaraná</li>
+            <li>L-Arginina</li>
+            <li>Taurina</li>
+            <li>Niacina</li>
+            <li>Zinc</li>
+            <li>Vitamina E</li>
                         </div>
                     </div>
 
                     <div class="sub-detail-section">
-                        <div class="sub-detail-header" onclick="toggleSubDetails('libi-life-invima', this)">
-                            <span>Registro INVIMA</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <div id="libi-life-invima" class="sub-detail-content">
-                            <p>Registro INVIMA N°. SD2019-0004419</p>
-                            <p>Expediente Sanitario: 20139330</p>
-                            <p>Nombre del Producto (INVIMA): Suplemento dietario en capsulas a base de extracto seco guaraná, maca root, l-arginina, niacina, sulfato de zinc, taurina, vitamina e; marca Llibilife</p>
-                            <p>Fecha de Vencimiento: 2029/08/30</p>
-                            <p>Modalidad: Fabricar y Vender</p>
-                            <p>Estado Actual: Vigente</p>
-                            <p>Resolución que concede registro: Resolución no. 2019031483 del 25 de julio de 2019</p>
-                            <p>Marca: LIBI LIFE</p>
-                            <p>Forma Farmacéutica: Cápsula Dura</p>
-                            <p>Vida Útil: 2 años en envase original a temperatura inferior a $30^\circ C$ y 65% humedad</p>
-                        </div>
-                    </div>
-
-                    <div class="sub-detail-section">
-                        <div class="sub-detail-header" onclick="toggleSubDetails('libi-life-components', this)">
-                            <span>Componentes Principales</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <div id="libi-life-components" class="sub-detail-content">
-                            <ul>
-                                <li>Extracto de Guaraná</li>
-                                <li>L-Arginina</li>
-                                <li>Taurina</li>
-                                <li>Niacina</li>
-                                <li>Zinc</li>
-                                <li>Vitamina E</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="sub-detail-section">
-                        <div class="sub-detail-header" onclick="toggleSubDetails('libi-life-presentations', this)">
-                            <span>Presentaciones Comerciales</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <div id="libi-life-presentations" class="sub-detail-content">
-                            <p>Disponible en:</p>
-                            <ul>
-                                <li>**Botellas PET:** Para 10, 20, 30, 50, 60, 90, 100, 120, 200 y 500 unidades de cápsulas (varios colores de plástico y tapas).</li>
-                                <li>**Blíster (Aluminio / PVC):** Para 1, 2, 5, 10, 15, 20, 30 cápsulas.</li>
-                                <li>**Sachet (Polipropileno Orientado):** Para 1, 2, 5, 10, 15, 20 y 30 cápsulas.</li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="sub-detail-header" onclick="toggleSubDetails('libi-life-invima', this)">
+        <span>Registro INVIMA</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="libi-life-invima" class="sub-detail-content">
+        <h4>Registro INVIMA N°.</h4> 
+        <p>SD2019-0004419</p>
+        <p>Expediente Sanitario: 20139330</p>
+        <p>Nombre del Producto (INVIMA): Suplemento dietario en cápsulas a base de extracto seco de guaraná, maca root, L-arginina, niacina, sulfato de zinc, taurina y vitamina E; marca LIBI LIFE</p>
+        <p>Contenido Neto: 60 Tabletas.</p>
+        <p>Fabricado en Colombia.</p>
+        <p>Componentes Principales:</p>
+        <ul>
+        
+        </ul>
+        <p>Fecha de Vencimiento: 2029/08/30</p>
+        <p>Modalidad: Fabricar y Vender</p>
+        <p>Estado Actual: Vigente</p>
+        <p>Resolución que concede registro: Resolución no. 2019031483 del 25 de julio de 2019</p>
+        <p>Marca: LIBI LIFE</p>
+        <p>Forma Farmacéutica: Cápsula Dura</p>
+        <p>Vida Útil: 2 años en envase original a temperatura inferior a 30°C y 65% humedad</p>
+    </div>
+</div>
+              
 
                     <div class="sub-detail-section">
                         <div class="sub-detail-header" onclick="toggleSubDetails('libi-life-reco', this)">
@@ -1244,12 +1385,12 @@
             </section>
 
             <section class="product-item" id="vid-life-section">
-                <h3>VID-LIFE 60 CAP</h3>
-                <img src="https://i.postimg.cc/MT0NKGZ8/Vid-life.jpg" alt="VID-LIFE 60 Cápsulas" loading="lazy">
+                <h3>VID-LIFE</h3>
+                <img src="https://i.postimg.cc/CdTRdYxY/copilot-image-1751736626062.png" alt="VID-LIFE 60 Cápsulas" loading="lazy">
                 <button class="toggle-btn" onclick="toggleDetails('vid-life-details', this)">🔽 Ver más detalles</button>
                 <button class="add-to-cart-btn"
                         data-id="vid-life"
-                        data-name="VID-LIFE 60 CAP"
+                        data-name="VID-LIFE"
                         data-price="81738">
                     Añadir al Carrito
                 </button>
@@ -1263,31 +1404,109 @@
                             <span class="arrow">▼</span>
                         </div>
                         <div id="vid-life-description" class="sub-detail-content">
-                            <p>VID-LIFE 60 CAP es un suplemento dietario formulado para...</p>
-                            <p>Contenido Neto: 60 cápsulas.</p>
-                            <p>Fabricado en Colombia.</p>
+                            <h5>PRINCIPALES COMPONENTES</h5>
+                            <Li>Vitis-Vinífera</Li>
+                            <li>Fósforo</li>
+                            <li>Vitamina C</li>
+                            <li>Selenio</li>
+                            <li>Calcio</li>
+                            <li>Cobre</li>
+                            <li>Zinc</li>
+
                         </div>
                     </div>
 
-                    <div class="sub-detail-section">
-                        <div class="sub-detail-header" onclick="toggleSubDetails('vid-life-invima', this)">
-                            <span>Registro INVIMA</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <div id="vid-life-invima" class="sub-detail-content">
-                            <p>Registro INVIMA: SD2012-0002444</p>
-                        </div>
-                    </div>
+                  <div class="sub-detail-section">
+    <div class="sub-detail-header" onclick="toggleSubDetails('vid-life-invima', this)">
+        <span>Registro INVIMA</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="vid-life-invima" class="sub-detail-content">
+        <h4>Datos Generales del Producto</h4>
+        <table>
+            <tr>
+                <th>Expediente Sanitario</th>
+                <td>20043566</td>
+            </tr>
+            <tr>
+                <th>Nombre producto</th>
+                <td>SUPLEMENTO DIETARIO DEL FRUTO ENTERO DE UVA EN POLVO, VITAMINA C Y MINERALES, CALCIO, FOSFORO, COBRE, ZINC Y SELENIO</td>
+            </tr>
+            <tr>
+                <th>Registro Sanitario</th>
+                <td>SD2012-0002444</td>
+            </tr>
+            <tr>
+                <th>Vencimiento</th>
+                <td>2027/08/01</td>
+            </tr>
+            <tr>
+                <th>Modalidad</th>
+                <td>FABRICAR Y VENDER</td>
+            </tr>
+            <tr>
+                <th>Estado</th>
+                <td>Registro</td>
+            </tr>
+            <tr>
+                <th>Vigente</th>
+                <td>Sí</td>
+            </tr>
+            <tr>
+                
+           
+        </table>
+
+        <h4>Datos de Interés del Producto</h4>
+        <table>
+            <tr>
+                <th>Forma Farmacéutica</th>
+                <td>CÁPSULA DURA</td>
+            </tr>
+            <tr>
+                <th>Condición Conservación</th>
+                <td>SIN ESPECIFICAR</td>
+            </tr>
+            <tr>
+                
+            </tr>
+            <tr>
+                <th>Propiedades</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Vida Útil</th>
+                <td>24 MESES</td>
+            </tr>
+            <tr>
+                <th>Tratamiento</th>
+                <td></td>
+            </tr>
+        </table>
+
+        <h4>Presentaciones Comerciales</h4>
+        <p>FRASCO EN PVC COLOR BLANCO POR 30,60,90 Y 120 CÁPSULAS.</p>
+
+        <p class="disclaimer">"Este producto es un suplemento dietario, no es un medicamento y no suple una alimentación equilibrada."</p>
+    </div>
+</div>
 
                     <div class="sub-detail-section">
-                        <div class="sub-detail-header" onclick="toggleSubDetails('vid-life-ficha', this)">
-                            <span>Ficha Técnica</span>
-                            <span class="arrow">▼</span>
-                        </div>
-                        <div id="vid-life-ficha" class="sub-detail-content">
-                            <p>Aquí iría la información técnica detallada del producto VID-LIFE.</p>
-                        </div>
-                    </div>
+    <div class="sub-detail-header" onclick="toggleSubDetails('vid-life-ficha', this)">
+        <span>Ficha Técnica</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="vid-life-ficha" class="sub-detail-content">
+        <p><strong>SUPLEMENTO DIETARIO</strong></p>
+        <p>Con extracto en polvo de fruto entero de uva vid roja 400 mg</p>
+        <p>Contenido neto: 60 Cápsulas</p>
+
+        <p class="disclaimer">"Este producto es un suplemento dietario, no es un medicamento y no suple una alimentación equilibrada."</p>
+
+   <h4>¿Por qué elegir los suplementos que ofrecemos en verde vital de Lifehuni y Atomi?</h4>
+        <p>Nuestros complementos alimenticios son productos elaborados con nutrientes, que están destinados a suministrar elementos esenciales a nuestro organismo para la realización de sus funciones. En la mayoría de personas estos nutrientes son pobremente incorporados a través de la dieta usual.</p>
+    </div>
+</div>
 
                     <div class="sub-detail-section">
                         <div class="sub-detail-header" onclick="toggleSubDetails('vid-life-reco', this)">
@@ -1413,25 +1632,33 @@
                         </div>
                         <div id="protec-life-description" class="sub-detail-content">
                             <p><strong>PROTEC-LIFE</strong> es un suplemento alimenticio natural diseñado para potenciar tu bienestar general. Viene en polvo, ideal para una fácil preparación.</p>
-                            <p>¿Para qué sirve **PROTEC-LIFE**?</p>
+                            <p>¿Para qué sirve PROTEC-LIFE?</p>
                             <ul>
-                                <li>Aumenta la eficiencia del intestino para **absorber nutrientes**.</li>
-                                <li>Contiene **Lactoferrina**, una proteína con propiedades antivirales, antibacterianas y antiinflamatorias.</li>
-                                <li>Brinda **efectos terapéuticos** en casos de cáncer, VIH, Citomegalovirus y herpes.</li>
-                                <li>Previene el **Síndrome de fatiga crónica** e infecciones.</li>
-                                <li>Acelera la **cicatrización de los tejidos**.</li>
-                                <li>Disminuye el **envejecimiento** gracias a su potente acción antioxidante.</li>
-                                <li>Protege contra la **radiación solar**.</li>
-                                <li>Ayuda al buen funcionamiento del **hígado**.</li>
-                                <li>Reduce la posibilidad de **sangrados**.</li>
+                                <li>Aumenta la eficiencia del intestino para absorber nutrientes.</li>
+                                <li>Contiene Lactoferrina, una proteína con propiedades antivirales, antibacterianas y antiinflamatorias.</li>
+                                <li>Brinda efectos terapéuticos
+                                    en casos de cáncer, VIH, Citomegalovirus y herpes.</li>
+                                <li>Previene el Síndrome de fatiga crónica
+                                    e infecciones.</li>
+                                <li>Acelera la cicatrización de los tejidos.</li>
+                                <li>Disminuye el envejecimiento
+                                    gracias a su potente acción antioxidante.</li>
+                                <li>Protege contra la radiación solar.</li>
+                                <li>Ayuda al buen funcionamiento del hígado.</li>
+                                <li>Reduce la posibilidad de sangrados.</li>
                             </ul>
-                            <p>¿Qué contiene **PROTEC-LIFE**?</p>
+                            <p>¿Qué contiene PROTEC-LIFE?</p>
                             <ul>
-                                <li>**Vitaminas:** A, C, D, E, K y todo el complejo B (B1, B3, B5, B6, B7, B9 y B12).</li>
-                                <li>**Minerales esenciales:** Calcio, Cobre, Cromo, Fósforo, Hierro, Magnesio, Manganeso, Molibdeno, Potasio, Selenio, Sodio y Zinc.</li>
-                                <li>**Componentes bioactivos:** Calostro Bovino, Lactoferrina, Lisozima del calostro, Lactoperoxidasas.</li>
-                                <li>**Fibras y proteínas:** Fibra de avena, Proteína de soya y proteína de suero de leche.</li>
-                                <li>**Otros nutrientes clave:** Estevia, Betaglucan, Fructosa, Aceite de canola, Cisteína, Carnitina, Arginina, Inositol y Colina.</li>
+                                <li>Vitaminas:
+                                    A, C, D, E, K y todo el complejo B (B1, B3, B5, B6, B7, B9 y B12).</li>
+                                <li>Minerales esenciales:
+                                    Calcio, Cobre, Cromo, Fósforo, Hierro, Magnesio, Manganeso, Molibdeno, Potasio, Selenio, Sodio y Zinc.</li>
+                                <li>Componentes bioactivos:
+                                    Calostro Bovino, Lactoferrina, Lisozima del calostro, Lactoperoxidasas.</li>
+                                <li>Fibras y proteínas:
+                                    Fibra de avena, Proteína de soya y proteína de suero de leche.</li>
+                                <li>Otros nutrientes clave:
+                                    Estevia, Betaglucan, Fructosa, Aceite de canola, Cisteína, Carnitina, Arginina, Inositol y Colina.</li>
                             </ul>
                             <p>Presentación: Frasco por 500 Gr.</p>
                             <p>Fabricado en Colombia.</p>
@@ -1941,7 +2168,7 @@
             </section>
 
             <section class="product-item" id="reglu-section">
-                <h3>REGLU 60 CAP</h3>
+                <h3>REGLU 60</h3>
                 <img src="https://i.postimg.cc/FHWjgPsF/Reglu-scaled.jpg" alt="REGLU 60 CAP" loading="lazy">
                 <button class="toggle-btn" onclick="toggleDetails('reglu-details', this)">🔽 Ver más detalles</button>
                 <button class="add-to-cart-btn"
@@ -1960,19 +2187,38 @@
                             <span class="arrow">▼</span>
                         </div>
                         <div id="reglu-description" class="sub-detail-content">
-                            <p>REGLU 60 CAP es un suplemento dietario.</p>
-                            <p>Contenido Neto: 60 cápsulas.</p>
-                            <p>Fabricado en Colombia.</p>
+                          
+                            <p>𝐕𝐀𝐋𝐀𝐍𝐂𝐄, 𝐕𝐈𝐓𝐀𝐋𝐈𝐃𝐀𝐃 𝐘 𝐂𝐎𝐍𝐓𝐑𝐎𝐋</p>
+                            <p>Suplemento 100% natural que gracias a la combinación de sus componentes nos brinda beneficios en salud, tales como:</p>
+                            <p>Regula la glucosa.</p>
+                            <p>Ayuda a mantener estables los niveles de azúcar en la sangre, lo que es crucial para prevenir picos y caídas bruscas.</p>
+                            <p>Mejora la sensibilidad a la insulina, lo que permite que el cuerpo use la glucosa de manera mas eficiente.</p>
+                            <p>Regula la glucosa</p>
+                            <p>Ayuda a mantener estables los niveles de azúcar en la sangre, lo que es crucial para prevenir picos y caídas bruscas.</p>
+                            <p>Mejora la sensibilidad a la insulina, lo que permite que el cuerpo use la glucosa de manera mas eficiente.</p>
+                            <p>Reduce el riesgo de desarrollar diabetes tipo 2.</p>
+                            <p>Favorece la digestión y metabolización de los carbohidratos, reduciendo la acumulación de glucosa en la sangre.</p>
+                            <p>Ayuda a prevenir niveles elevados de azúcar en la sangre.</p>
+                            <p>𝐏𝐑𝐈𝐍𝐂𝐈𝐏𝐀𝐋𝐄𝐒 𝐂𝐎𝐌𝐏𝐎𝐍𝐄𝐍𝐓𝐄𝐒</p>
+                            <li>Yacón</li>
+                            <li>Cromo</li>
+                            <li>Vitamina B1</li>
+                            <li>Avicel</li>
+                            <li>Estearato de magnesio</li>
                         </div>
                     </div>
 
                     <div class="sub-detail-section">
                         <div class="sub-detail-header" onclick="toggleSubDetails('reglu-invima', this)">
                             <span>Registro INVIMA</span>
+                            
                             <span class="arrow">▼</span>
                         </div>
                         <div id="reglu-invima" class="sub-detail-content">
-                            <p>Registro INVIMA N°. SD2024-0004813</p>
+                            
+                         <p>Fabricado en Colombia.</p>
+                        <p>Registro INVIMA N°. SD2024-0004813</p>
+
                         </div>
                     </div>
 
@@ -1982,7 +2228,9 @@
                             <span class="arrow">▼</span>
                         </div>
                         <div id="reglu-ficha" class="sub-detail-content">
-                            <p>Aquí irá la información técnica detallada del producto REGLU 60 CAP.</p>
+                           
+                            <p>¿𝐏𝐎𝐑𝐐𝐔𝐄 𝐄𝐋𝐄𝐆𝐈𝐑 𝐋𝐎𝐒 𝐒𝐔𝐏𝐋𝐄𝐌𝐄𝐍𝐓𝐎𝐒 𝐃𝐄 𝐋𝐈𝐅𝐄𝐇𝐔𝐍𝐈?</p>
+                            <p>Nuestros complementos alimenticios son productos elaborados con nutrientes, que están destinados a suministrar elementos esenciales a nuestro organismo para la realización de sus funciones, en la mayoría de personas estos nutrientes son pobremente incorporados a través de la dieta usual.</p>
                         </div>
                     </div>
 
@@ -2097,6 +2345,7 @@
                     </div>
                 </div>
             </section>
+            
             <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;"> <h2 id="atomy-products-section">Otros Productos (Atomy)</h2>
             <button class="toggle-btn" id="openAtomySectionButton">🔽 Abrir Sección Atomy</button>
 
@@ -2104,30 +2353,32 @@
                 <section class="info-block" id="atomy-intro-section">
                     <h1>𝗔𝗧𝗢𝗠𝗬</h1>
                     <img src="https://i.postimg.cc/5td8Gs48/sub0107-slogan.png" alt="Slogan de Atomy: Calidad Absoluta, Precio Absoluto" loading="lazy" style="max-width: 100%; display: block; margin: 20px auto; border-radius: var(--border-radius); box-shadow: var(--shadow-light);">
-                    <p>La Teoría Básica de Economía es Sencilla: ¡La Distribución es la Clave! Estrategia Efectiva en donde la Calidad se encuentra con el Valor. La estrategia MASSTIGE de Atomy es brindar productos de Calidad Absoluta a un Precio Absoluto.</p>
-                    <p>Mientras el mercado mundial se torna cada vez más global y unido en un solo mercado, la marca Masstige de Atomy está posicionada para ganar presencia y lograr crecimiento.</p>
-                    <p>Desde su fundación en 2009, Atomy tomó su lugar como competidor global con la expansión hacia Estados Unidos en 2010, seguido por Japón, Canadá, Taiwán, Singapur, Camboya, Filipinas y Malasia, México y Tailandia.</p>
-                    <p>El secreto del crecimiento acelerado en los mercados extranjeros es la estrategia Masstige, la cual nos permitió ser ganadora del Reconocimiento de Exportaciones por USD 5 millones en 2011, USD 10 millones en 2013, USD 20 millones en 2015, USD 30 millones en 2016 y en 2017 se pretende lograr la hazaña de llegar a los USD 50 millones en exportación. Atomy va a seguir expandiendo hacia Australia, Vietnam e Indonesia durante 2018 y también el mercado chino, el mercado de ventas directas más grande del mundo, en 2019. Como siempre, Atomy se compromete a dedicar esfuerzos a su visión de convertirse en un centro de distribución global.</p>
-                    <p>Desde su establecimiento, nuestro objetivo no ha sido la competencia con otras compañías de mercadeo en red. De manera alterna, competimos con mayoristas tales como los supermercados, tiendas departamentales, compras desde el hogar y minoristas en línea, de esta manera se intenta transformar la forma en la que adquirimos nuestros bienes. A partir de ahora, Atomy reescribirá la historia del Mercadeo en Red.</p>
-                    <p>Construida sobre una base de principios, Atomy liderará la industria para darle una nueva forma al reconocimiento y a la reputación.</p>
-                    <h4>Atomy sigue tres fundamentos:</h4>
+                  <p style="font-family: 'Arial', sans-serif;"><h3>🌐TEORIA BÁSICA DE ECONOMÍA ¡LA DISTRIBUCIÓN ES LA CLAVE!</h3>
+                    <p>𝗔𝘁𝗼𝗺𝘆 𝗿𝗲𝗲𝗱𝗲𝗳𝗶𝗻𝗲 𝗲𝗹 𝗰𝗼𝗺𝗲𝗿𝗰𝗶𝗼 𝗴𝗹𝗼𝗯𝗮𝗹 𝗮 𝘁𝗿𝗮𝘃𝗲𝘀 𝗱𝗲 𝘀𝘂 𝗲𝘀𝘁𝗿𝗮𝘁𝗲𝗴𝗶𝗮 𝗠𝗔𝗦𝗦𝗦𝗧𝗜𝗚𝗘, 𝗾𝘂𝗲 𝗼𝗳𝗿𝗲𝗰𝗲 𝗽𝗿𝗼𝗱𝘂𝗰𝘁𝗼𝘀 𝗱𝗲 𝗰𝗮𝗹𝗶𝗱𝗮𝗱 𝗮𝗯𝘀𝗼𝗹𝘂𝘁𝗮 𝗮 𝘂𝗻 𝗽𝗿𝗲𝗰𝗶𝗼 𝗮𝗯𝘀𝗼𝗹𝘂𝘁𝗼, 𝘂𝗻𝗶𝗲𝗻𝗱𝗼 𝘃𝗮𝗹𝗼𝗿 𝘆 𝗲𝘅𝗰𝗲𝗹𝗲𝗻𝗰𝗶𝗮 𝗮𝗰𝗰𝗲𝘀𝗶𝗯𝗹𝗲.</p>
+                    <p>🚀 𝗘𝘅𝗽𝗮𝗻𝘀𝗶𝗼𝗻 𝗜𝗻𝘁𝗲𝗿𝗻𝗮𝗰𝗶𝗼𝗻𝗮𝗹𝗗𝗲𝘀𝗱𝗲 𝘀𝘂 𝗳𝘂𝗻𝗱𝗮𝗰𝗶𝗼𝗻 𝗲𝗻 𝟮𝟬𝟬𝟵, 𝗔𝘁𝗼𝗺𝘆 𝗵𝗮 𝗰𝗼𝗻𝘀𝗼𝗹𝗶𝗱𝗮𝗱𝗼 𝘂𝗻𝗮 𝗶𝗺𝗽𝗿𝗲𝘀𝗶𝗼𝗻𝗮𝗻𝘁𝗲 𝘁𝗿𝗮𝘆𝗲𝗰𝘁𝗼𝗿𝗶𝗮 𝗱𝗲 𝗰𝗿𝗲𝗰𝗶𝗺𝗶𝗲𝗻𝘁𝗼:</p>
+                    <h3>𝟮𝟬𝟭𝟬 𝗜𝗡𝗚𝗥𝗘𝗦𝗢 𝗔 𝗘𝗦𝗧𝗔𝗗𝗢𝗦 𝗨𝗡𝗜𝗗𝗢𝗦</h3>
+                    <p>𝗗𝗲𝘀𝗱𝗲 𝘀𝘂 𝗳𝘂𝗻𝗱𝗮𝗰𝗶𝗼𝗻 𝗲𝗻 𝟮𝟬𝟬𝟵, 𝗔𝘁𝗼𝗺𝘆 𝘁𝗼𝗺𝗼 𝘀𝘂 𝗹𝘂𝗴𝗮𝗿 𝗰𝗼𝗺𝗼 𝗰𝗼𝗺𝗽𝗲𝘁𝗶𝗱𝗼𝗿 𝗴𝗹𝗼𝗯𝗮𝗹 𝗰𝗼𝗻 𝗹𝗮 𝗲𝘅𝗽𝗮𝗻𝘀𝗶ó𝗻 𝗵𝗮𝗰𝗶𝗮 𝗘𝘀𝘁𝗮𝗱𝗼𝘀 𝗨𝗻𝗶𝗱𝗼𝘀 𝗲𝗻 𝟮𝟬𝟭𝟬, 𝘀𝗲𝗴𝘂𝗶𝗱𝗼 𝗽𝗼𝗿 𝗝𝗮𝗽𝗼𝗻, 𝗖𝗮𝗻𝗮𝗱𝗮, 𝗧𝗮𝗶𝘄𝗮𝗻, 𝗦𝗶𝗻𝗴𝗮𝗽𝘂𝗿, 𝗖𝗮𝗺𝗯𝗼𝘆𝗮, 𝗙𝗶𝗹𝗶𝗽𝗶𝗻𝗮𝘀 𝘆 𝗠𝗮𝗹𝗮𝘀𝗶𝗮, 𝗠𝗲𝘅𝗶𝗰𝗼 𝘆 𝗧𝗮𝗶𝗹𝗮𝗻𝗱𝗶𝗮.</p>
+                    <p>𝗘𝗹 𝘀𝗲𝗰𝗿𝗲𝘁𝗼 𝗱𝗲𝗹 𝗰𝗿𝗲𝗰𝗶𝗺𝗶𝗲𝗻𝘁𝗼 𝗮𝗰𝗲𝗹𝗲𝗿𝗮𝗱𝗼 𝗲𝗻 𝗹𝗼𝘀 𝗺𝗲𝗿𝗰𝗮𝗱𝗼𝘀 𝗲𝘅𝘁𝗿𝗮𝗻𝗷𝗲𝗿𝗼𝘀 𝗲𝘀 𝗹𝗮 𝗲𝘀𝘁𝗿𝗮𝘁𝗲𝗴𝗶𝗮 𝗠𝗮𝘀𝘀𝘁𝗶𝗴𝗲, 𝗹𝗮 𝗰𝘂𝗮𝗹 𝗻𝗼𝘀 𝗽𝗲𝗿𝗺𝗶𝘁𝗶𝗼 𝘀𝗲𝗿 𝗴𝗮𝗻𝗮𝗱𝗼𝗿𝗮 𝗱𝗲𝗹 𝗥𝗲𝗰𝗼𝗻𝗼𝗰𝗶𝗺𝗶𝗲𝗻𝘁𝗼 𝗱𝗲 𝗘𝘅𝗽𝗼𝗿𝘁𝗮𝗰𝗶𝗼𝗻𝗲𝘀 𝗽𝗼𝗿 𝗨𝗦𝗗 𝟱 𝗺𝗶𝗹𝗹𝗼𝗻𝗲𝘀 𝗲𝗻 𝟮𝟬𝟭𝟭, 𝗨𝗦𝗗 𝟭𝟬 𝗺𝗶𝗹𝗹𝗼𝗻𝗲𝘀 𝗲𝗻 𝟮𝟬𝟭𝟯, 𝗨𝗦𝗗 𝟮𝟬 𝗺𝗶𝗹𝗹𝗼𝗻𝗲𝘀 𝗲𝗻 𝟮𝟬𝟭𝟱, 𝗨𝗦𝗗 𝟯𝟬 𝗺𝗶𝗹𝗹𝗼𝗻𝗲𝘀 𝗲𝗻 𝟮𝟬𝟭𝟲 𝘆 𝗲𝗻 𝟮𝟬𝟭𝟳 𝘀𝗲 𝗽𝗿𝗲𝘁𝗲𝗻𝗱𝗲 𝗹𝗼𝗴𝗿𝗮𝗿 𝗹𝗮 𝗵𝗮𝘇𝗮ñ𝗮 𝗱𝗲 𝗹𝗹𝗲𝗴𝗮𝗿 𝗮 𝗹𝗼𝘀 𝗨𝗦𝗗 𝟱𝟬 𝗺𝗶𝗹𝗹𝗼𝗻𝗲𝘀 𝗲𝗻 𝗲𝘅𝗽𝗼𝗿𝘁𝗮𝗰𝗶𝗼𝗻. 𝗔𝘁𝗼𝗺𝘆 𝘃𝗮 𝗮 𝘀𝗲𝗴𝘂𝗶𝗿 𝗲𝘅𝗽𝗮𝗻𝗱𝗶𝗲𝗻𝗱𝗼 𝗵𝗮𝗰𝗶𝗮 𝗔𝘂𝘀𝘁𝗿𝗮𝗹𝗶𝗮, 𝗩𝗶𝗲𝘁𝗻𝗮𝗺 𝗲 𝗜𝗻𝗱𝗼𝗻𝗲𝘀𝗶𝗮 𝗱𝘂𝗿𝗮𝗻𝘁𝗲 𝟮𝟬𝟭𝟴 𝘆 𝘁𝗮𝗺𝗯𝗶𝗲𝗻 𝗲𝗹 𝗺𝗲𝗿𝗰𝗮𝗱𝗼 𝗰𝗵𝗶𝗻𝗼, 𝗲𝗹 𝗺𝗲𝗿𝗰𝗮𝗱𝗼 𝗱𝗲 𝘃𝗲𝗻𝘁𝗮𝘀 𝗱𝗶𝗿𝗲𝗰𝘁𝗮𝘀 𝗺𝗮𝘀 𝗴𝗿𝗮𝗻𝗱𝗲 𝗱𝗲𝗹 𝗺𝘂𝗻𝗱𝗼, 𝗲𝗻 𝟮𝟬𝟭𝟵. 𝗖𝗼𝗺𝗼 𝘀𝗶𝗲𝗺𝗽𝗿𝗲, 𝗔𝘁𝗼𝗺𝘆 𝘀𝗲 𝗰𝗼𝗺𝗽𝗿𝗼𝗺𝗲𝘁𝗲 𝗮 𝗱𝗲𝗱𝗶𝗰𝗮𝗿 𝗲𝘀𝗳𝘂𝗲𝗿𝘇𝗼𝘀 𝗮 𝘀𝘂 𝘃𝗶𝘀𝗶𝗼𝗻 𝗱𝗲 𝗰𝗼𝗻𝘃𝗲𝗿𝘁𝗶𝗿𝘀𝗲 𝗲𝗻 𝘂𝗻 𝗰𝗲𝗻𝘁𝗿𝗼 𝗱𝗲 𝗱𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝗰𝗶𝗼𝗻 𝗴𝗹𝗼𝗯𝗮𝗹.</p>
+                    <p>𝗗𝗲𝘀𝗱𝗲 𝘀𝘂 𝗲𝘀𝘁𝗮𝗯𝗹𝗲𝗰𝗶𝗺𝗶𝗲𝗻𝘁𝗼, 𝗻𝘂𝗲𝘀𝘁𝗿𝗼 𝗼𝗯𝗷𝗲𝘁𝗶𝘃𝗼 𝗻𝗼 𝗵𝗮 𝘀𝗶𝗱𝗼 𝗹𝗮 𝗰𝗼𝗺𝗽𝗲𝘁𝗲𝗻𝗰𝗶𝗮 𝗰𝗼𝗻 𝗼𝘁𝗿𝗮𝘀 𝗰𝗼𝗺𝗽𝗮ñ𝗶𝗮𝘀 𝗱𝗲 𝗺𝗲𝗿𝗰𝗮𝗱𝗲𝗼 𝗲𝗻 𝗿𝗲𝗱. 𝗗𝗲 𝗺𝗮𝗻𝗲𝗿𝗮 𝗮𝗹𝘁𝗲𝗿𝗻𝗮, 𝗰𝗼𝗺𝗽𝗲𝘁𝗶𝗺𝗼𝘀 𝗰𝗼𝗻 𝗺𝗮𝘆𝗼𝗿𝗶𝘀𝘁𝗮𝘀 𝘁𝗮𝗹𝗲𝘀 𝗰𝗼𝗺𝗼 𝗹𝗼𝘀 𝘀𝘂𝗽𝗲𝗿𝗺𝗲𝗿𝗰𝗮𝗱𝗼𝘀, 𝘁𝗶𝗲𝗻𝗱𝗮𝘀 𝗱𝗲𝗽𝗮𝗿𝘁𝗮𝗺𝗲𝗻𝘁𝗮𝗹𝗲𝘀, 𝗰𝗼𝗺𝗽𝗿𝗮𝘀 𝗱𝗲𝘀𝗱𝗲 𝗲𝗹 𝗵𝗼𝗴𝗮𝗿 𝘆 𝗺𝗶𝗻𝗼𝗿𝗶𝘀𝘁𝗮𝘀 𝗲𝗻 𝗹𝗶𝗻𝗲𝗮, 𝗱𝗲 𝗲𝘀𝘁𝗮 𝗺𝗮𝗻𝗲𝗿𝗮 𝘀𝗲 𝗶𝗻𝘁𝗲𝗻𝘁𝗮 𝘁𝗿𝗮𝗻𝘀𝗳𝗼𝗿𝗺𝗮𝗿 𝗹𝗮 𝗳𝗼𝗿𝗺𝗮 𝗲𝗻 𝗹𝗮 𝗾𝘂𝗲 𝗮𝗱𝗾𝘂𝗶𝗿𝗶𝗺𝗼𝘀 𝗻𝘂𝗲𝘀𝘁𝗿𝗼𝘀 𝗯𝗶𝗲𝗻𝗲𝘀. 𝗔 𝗽𝗮𝗿𝘁𝗶𝗿 𝗱𝗲 𝗮𝗵𝗼𝗿𝗮, 𝗔𝘁𝗼𝗺𝘆 𝗿𝗲𝗲𝘀𝗰𝗿𝗶𝗯𝗶𝗿𝗮 𝗹𝗮 𝗵𝗶𝘀𝘁𝗼𝗿𝗶𝗮 𝗱𝗲𝗹 𝗠𝗲𝗿𝗰𝗮𝗱𝗲𝗼 𝗲𝗻 𝗥𝗲𝗱.</p>
+                    <P>𝗖𝗼𝗻𝘀𝘁𝗿𝘂𝗶𝗱𝗮 𝘀𝗼𝗯𝗿𝗲 𝘂𝗻𝗮 𝗯𝗮𝘀𝗲 𝗱𝗲 𝗽𝗿𝗶𝗻𝗰𝗶𝗽𝗶𝗼𝘀, 𝗔𝘁𝗼𝗺𝘆 𝗹𝗶𝗱𝗲𝗿𝗮𝗿𝗮 𝗹𝗮 𝗶𝗻𝗱𝘂𝘀𝘁𝗿𝗶𝗮 𝗽𝗮𝗿𝗮 𝗱𝗮𝗿𝗹𝗲 𝘂𝗻𝗮 𝗻𝘂𝗲𝘃𝗮 𝗳𝗼𝗿𝗺𝗮 𝗮𝗹 𝗿𝗲𝗰𝗼𝗻𝗼𝗰𝗶𝗺𝗶𝗲𝗻𝘁𝗼 𝘆 𝗮 𝗹𝗮 𝗿𝗲𝗽𝘂𝘁𝗮𝗰𝗶𝗼𝗻.</P>
+                    <h3>Atomy sigue tres fundamentos:</h3>
                     <ul>
-                        <li><strong>1. Cultura Enfocada en Principios</strong></li>
-                        <li><strong>2. Cultura del Crecimiento Acompañado</strong></li>
-                        <li><strong>3. Cultura de Compartir</strong></li>
+                        <li><strong><h4>1.Cultura Enfocada en Principios</h4></strong></li>
+                        <li><strong><h4>2.Cultura del Crecimiento Acompañado.</h4></strong></li>
+                        <li><strong><h4>3.Cultura de Compartir</h4> </strong></li>
                     </ul>
-                    <p>Nuestro objetivo va más allá de la satisfacción del consumidor; en su lugar, está más enfocado en el éxito.</p>
-                    <p>¡Una corporación que atesora el espíritu! Creemos que valorar a los individuos es nuestra prioridad. Sé nuestro socio en confianza y cree en tu propio éxito a través de Atomy. Siempre te serviremos con el más humilde de los corazones. Disfruta de una vida bella con Atomy y haz tus sueños realidad.</p>
+                    <p>𝗡𝘂𝗲𝘀𝘁𝗿𝗼 𝗼𝗯𝗷𝗲𝘁𝗶𝘃𝗼 𝘃𝗮 𝗺𝗮𝘀 𝗮𝗹𝗹𝗮 𝗱𝗲 𝗹𝗮 𝘀𝗮𝘁𝗶𝘀𝗳𝗮𝗰𝗰𝗶𝗼𝗻 𝗱𝗲𝗹 𝗰𝗼𝗻𝘀𝘂𝗺𝗶𝗱𝗼𝗿; 𝗲𝗻 𝘀𝘂 𝗹𝘂𝗴𝗮𝗿, 𝗲𝘀𝘁𝗮 𝗺𝗮𝘀 𝗲𝗻𝗳𝗼𝗰𝗮𝗱𝗼 𝗲𝗻 𝗲𝗹 𝗲𝘅𝗶𝘁𝗼...</p>
+                    <p>¡𝗨𝗻𝗮 𝗰𝗼𝗿𝗽𝗼𝗿𝗮𝗰𝗶𝗼𝗻 𝗾𝘂𝗲 𝗮𝘁𝗲𝘀𝗼𝗿𝗮 𝗲𝗹 𝗲𝘀𝗽𝗶𝗿𝗶𝘁𝘂! 𝗖𝗿𝗲𝗲𝗺𝗼𝘀 𝗾𝘂𝗲 𝘃𝗮𝗹𝗼𝗿𝗮𝗿 𝗮 𝗹𝗼𝘀 𝗶𝗻𝗱𝗶𝘃𝗶𝗱𝘂𝗼𝘀 𝗲𝘀 𝗻𝘂𝗲𝘀𝘁𝗿𝗮 𝗽𝗿𝗶𝗼𝗿𝗶𝗱𝗮𝗱. 𝗦𝗲 𝗻𝘂𝗲𝘀𝘁𝗿𝗼 𝘀𝗼𝗰𝗶𝗼 𝗲𝗻 𝗰𝗼𝗻𝗳𝗶𝗮𝗻𝘇𝗮 𝘆 𝗰𝗿𝗲𝗲 𝗲𝗻 𝘁𝘂 𝗽𝗿𝗼𝗽𝗶𝗼 𝗲𝘅𝗶𝘁𝗼 𝗮 𝘁𝗿𝗮𝘃𝗲𝘀 𝗱𝗲 𝗔𝘁𝗼𝗺𝘆. 𝗦𝗶𝗲𝗺𝗽𝗿𝗲 𝘁𝗲 𝘀𝗲𝗿𝘃𝗶𝗿𝗲𝗺𝗼𝘀 𝗰𝗼𝗻 𝗲𝗹 𝗺𝗮𝘀 𝗵𝘂𝗺𝗶𝗹𝗱𝗲 𝗱𝗲 𝗹𝗼𝘀 𝗰𝗼𝗿𝗮𝘇𝗼𝗻𝗲𝘀. 𝗗𝗶𝘀𝗳𝗿𝘂𝘁𝗮 𝗱𝗲 𝘂𝗻𝗮 𝘃𝗶𝗱𝗮 𝗯𝗲𝗹𝗹𝗮 𝗰𝗼𝗻 𝗔𝘁𝗼𝗺𝘆 𝘆 𝗵𝗮𝘇 𝘁𝘂𝘀 𝘀𝘂𝗲ñ𝗼𝘀 𝗿𝗲𝗮𝗹𝗶𝗱𝗮𝗱!..</p>
                 </section>
-                <section class="product-item" id="atomy-pasta-dental-section"> <h2>Pasta dental 200g x 5 unidades</h2> <img src="https://i.postimg.cc/j5yM1wk3/Picsart-25-06-19-01-12-46-791.jpg" alt="Pasta dental 200g x 5 unidades" loading="lazy">
+                <section class="product-item" id="atomy-pasta-dental-section"> <h2>Pasta dental</h2> <img src="https://i.postimg.cc/j5yM1wk3/Picsart-25-06-19-01-12-46-791.jpg" alt="Pasta dental 200g x 5 unidades" loading="lazy">
                     <button class="toggle-btn" onclick="toggleDetails('atomy-pasta-dental-details', this)">🔽 Ver más detalles</button>
                     <button class="add-to-cart-btn"
-                            data-id="atomy-pasta-dental" data-name="Pasta dental 200g x 5 unidades"
+                            data-id="atomy-pasta-dental" data-name="Pasta dental"
                             data-price="71200">
                         Añadir al Carrito
                     </button>
 
-                    <div id="atomy-pasta-dental-details" class="details-content"> <p><strong>Precio:</strong> $71.200 COP</p>
+                    <div id="atomy-pasta-dental-details" class="details-content"> <p><strong>Precio:<h3>$71.200 COP</h3></p>
 
                         <div class="sub-detail-section">
                             <div class="sub-detail-header" onclick="toggleSubDetails('atomy-pasta-dental-description', this)"> <span>Descripción</span>
@@ -2143,11 +2394,16 @@
                                 <span class="arrow">▼</span>
                             </div>
                             <div id="atomy-pasta-dental-benefits" class="sub-detail-content"> <ul>
-                                    <li>**Prevención de caries:** Ayuda a combatir las bacterias que causan la caries.</li>
-                                    <li>**Aliento fresco:** Proporciona una sensación duradera de frescura.</li>
-                                    <li>**Cuidado de encías:** Contribuye a mantener las encías saludables.</li>
-                                    <li>**Eliminación de placa:** Efectiva en la remoción de la placa bacteriana.</li>
-                                    <li>**Blancura natural:** Ayuda a mantener el color natural de los dientes.</li>
+                                    <li>Prevención de caries:
+                                        Ayuda a combatir las bacterias que causan la caries.</li>
+                                    <li>Aliento fresco:
+                                        Proporciona una sensación duradera de frescura.</li>
+                                    <li>Cuidado de encías:
+                                        Contribuye a mantener las encías saludables.</li>
+                                    <li>Eliminación de placa:
+                                        Efectiva en la remoción de la placa bacteriana.</li>
+                                    <li>Blancura natural:
+                                        Ayuda a mantener el color natural de los dientes.</li>
                                 </ul>
                             </div>
                         </div>
@@ -2164,76 +2420,136 @@
                             <div class="sub-detail-header" onclick="toggleSubDetails('atomy-pasta-dental-more', this)"> <span>Testimonios y Más</span>
                                 <span class="arrow">▼</span>
                             </div>
-                            <div id="atomy-pasta-dental-more" class="sub-detail-content"> <p>Descubre por qué esta pasta dental es la favorita de muchos clientes de Atomy.</p>
+                            <div id="Pasta-dental-more" class="sub-detail-content"> <p>Descubre por qué esta pasta dental es la favorita de muchos clientes de Atomy.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="product-item" id="atomy-espuma-limpiadora-section">
-                    <h2>Espuma Limpiadora Facial Deep Pure Cleansing Oil (Atomy)</h2>
-                    <img src="https://i.postimg.cc/Kj9mSZZ6/00510-2.jpg" alt="Espuma Limpiadora Facial Deep Pure Cleansing Oil" loading="lazy">
-                    <button class="toggle-btn" onclick="toggleDetails('atomy-espuma-limpiadora-details', this)">🔽 Ver más detalles</button>
-                    <button class="add-to-cart-btn"
-                            data-id="atomy-espuma-limpiadora"
-                            data-name="Espuma Limpiadora Facial (Atomy)"
-                            data-price="42000"> Añadir al Carrito
-                    </button>
+                <section class="product-item" id="Cepillo-dental-section">
+  <h2>Cepillo dental</h2>
+  <img src="https://i.postimg.cc/Kj9mSZZ6/00510-2.jpg" alt="Cepillo dental con propiedades antibacteriales, cerdas flexibles con polvo de oro para prevenir acumulación de bacterias" loading="lazy"/>
 
-                    <div id="atomy-espuma-limpiadora-details" class="details-content">
-                        <p><strong>Precio:</strong> $42.000 COP</p>
+  <button class="toggle-btn" onclick="toggleDetails('Cepillo-dental-description-details', this)">🔽 Ver más detalles</button>
+  <button class="add-to-cart-btn"
+          data-id="cepillo-dental"
+          data-name="Cepillo dental (Atomy)"
+          data-price="37000">Añadir al Carrito</button>
 
-                        <div class="sub-detail-section">
-                            <div class="sub-detail-header" onclick="toggleSubDetails('atomy-espuma-limpiadora-description', this)">
-                                <span>Descripción</span>
-                                <span class="arrow">▼</span>
-                            </div>
-                            <div id="atomy-espuma-limpiadora-description" class="sub-detail-content">
-                                <p>La Espuma Limpiadora Facial Deep Pure Cleansing Oil de Atomy es un limpiador a base de aceite diseñado para remover eficazmente el maquillaje, las impurezas y el protector solar sin dejar residuos grasos.</p>
-                                <p>Deja la piel limpia, fresca e hidratada, preparando el rostro para los siguientes pasos de tu rutina de cuidado facial.</p>
-                            </div>
-                        </div>
+  <div id="Cepillo-dental-description-details" class="details-content">
+    <p><strong>Precio:</strong><h3>$37,000 COP</h3></p>
 
-                        <div class="sub-detail-section">
-                            <div class="sub-detail-header" onclick="toggleSubDetails('atomy-espuma-limpiadora-benefits', this)">
-                                <span>Beneficios Clave</span>
-                                <span class="arrow">▼</span>
-                            </div>
-                            <div id="atomy-espuma-limpiadora-benefits" class="sub-detail-content">
-                                <ul>
-                                    <li>**Limpieza profunda:** Elimina maquillaje, sebo y suciedad incrustada.</li>
-                                    <li>**Hidratación:** No reseca la piel, dejándola suave.</li>
-                                    <li>**Ingredientes naturales:** Formulado con aceites vegetales nutritivos.</li>
-                                    <li>**Para todo tipo de piel:** Suave y efectivo incluso en pieles sensibles.</li>
-                                </ul>
-                            </div>
-                        </div>
+    <div class="sub-detail-section">
+      <div class="sub-detail-header" onclick="toggleSubDetails('Cepillo-dental-description', this)">
+        <span>Descripción</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div id="Cepillo-dental-description" class="sub-detail-content">
+        <p>Cepillo dental con propiedades antibacteriales, cerdas flexibles con polvo de oro para prevenir la acumulación de bacterias.</p>
+        <table>
+  <tr>
+    <th>Nombre</th>
+    <td>Atomy Cepillo Dental</td>
+  </tr>
+  <tr>
+    <th>Contenido</th>
+    <td>1 set = 8 unidades</td>
+  </tr>
+  <tr>
+    <th>Manufactura</th>
+    <td>Deo Tech Korea</td>
+  </tr>
+  <tr>
+    <th>Cerdas</th>
+    <td>Polvo de oro + PBT</td>
+  </tr>
+  <tr>
+    <th>Resistencia al calor</th>
+    <td>Hasta 60°C (no usar agua hirviendo para sanitizar)</td>
+  </tr>
+  <tr>
+    <th>Mango</th>
+    <td>PCTG</td>
+  </tr>
+  <tr>
+    <th>Tapa</th>
+    <td>PP</td>
+  </tr>
+</table>
+      </div>
+    </div>
 
-                        <div class="sub-detail-section">
-                            <div class="sub-detail-header" onclick="toggleSubDetails('atomy-espuma-limpiadora-how-to-use', this)">
-                                <span>Modo de Uso</span>
-                                <span class="arrow">▼</span>
-                            </div>
-                            <div id="atomy-espuma-limpiadora-how-to-use" class="sub-detail-content">
-                                <p>Con el rostro seco, aplica una cantidad adecuada de aceite limpiador en la palma de tu mano. Masajea suavemente sobre el rostro para disolver el maquillaje. Añade un poco de agua para emulsionar el aceite y crea una espuma ligera. Enjuaga con abundante agua tibia.</p>
-                            </div>
-                        </div>
+    <div class="sub-detail-section">
+      <div class="sub-detail-header" onclick="toggleSubDetails('Cepillo-dental-benefits', this)">
+        <span>Beneficios Clave</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div id="Cepillo-dental-benefits" class="sub-detail-content">
+        <ul>
+          <li>Cerdas ultra delgadas de 0,18 mm y punta de 0,03 mm para una limpieza profunda.</li>
+          <li>99,9 % de polvo de oro: efecto antibacteriano que mantiene la higiene del cepillo.</li>
+          <li>Cabezal delgado que alcanza zonas difíciles.</li>
+          <li>Mango ergonómico, transparente, ecológico y resistente a moho.</li>
+        </ul>
+      </div>
+    </div>
 
-                        <div class="sub-detail-section">
-                            <div class="sub-detail-header" onclick="toggleSubDetails('atomy-espuma-limpiadora-more', this)">
-                                <span>Testimonios y Más</span>
-                                <span class="arrow">▼</span>
-                            </div>
-                            <div id="atomy-espuma-limpiadora-more" class="sub-detail-content">
-                                <p>Conoce las opiniones de quienes ya disfrutan de una piel más limpia y radiante con este producto de Atomy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <div class="sub-detail-section">
+      <div class="sub-detail-header" onclick="toggleSubDetails('Cepillo-dental-how-to-use', this)">
+        <span>Modo de Uso</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div id="Cepillo-dental-how-to-use" class="sub-detail-content">
+        <p>Utiliza el cepillo como parte de tu rutina de higiene bucal diaria. Asegúrate de enjuagarlo tras cada uso y reemplazarlo cada 2-3 meses.</p>
+      </div>
+    </div>
+
+    <div class="sub-detail-section">
+      <div class="sub-detail-header" onclick="toggleSubDetails('Cepillo-dental-testimonials', this)">
+        <span>Testimonios y Más</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div id="Cepillo-dental-testimonials" class="sub-detail-content">
+        <p>Conoce las opiniones de quienes ya disfrutan de una experiencia de cepillado superior con Atomy abajo en la parte superior, testimonios y reseñas</p>
+      </div>
+    </div>
+  </div>
+</section>
                 </div>
             </main>
 
         <footer>
+            <section class="review-section" style="margin-top: 30px;">
+  <h2>Testimonios y Reseñas</h2>
+  <p>No hay valoraciones aún.</p>
+
+  <form class="review-form">
+    <p>Tu puntuación</p>
+    <div class="stars">
+      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+    </div>
+
+    <label for="review">Tu valoración *</label>
+    <textarea id="review" required></textarea>
+
+    <label for="name">Nombre *</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Correo electrónico *</label>
+    <input type="email" id="email" required>
+
+    <div class="remember">
+      <input type="checkbox" id="remember">
+      <label for="remember">Guardar mi nombre, correo electrónico y web en este navegador para la próxima vez que comente.</label>
+    </div>
+
+    <button type="submit">ENVIAR</button>
+  </form>
+</section>
             <p>Todos los derechos reservados &copy; 2025</p>
             <p>Página Original & Auténtica</p>
             <p>Contacto: <a href="mailto:Elbacansoyo@gmail.com">Elbacansoyo@gmail.com</a> | Teléfono: 3005465576</p>
@@ -2631,12 +2947,12 @@
                 whatsappChatContainer.removeEventListener('transitionend', handler);
             }, { once: true });
         }
-
         function openWhatsAppChatWithText() {
             const prefilledText = encodeURIComponent(whatsappMessageInput.value || '¡Hola! ¿Cómo podemos ayudarte?.');
             const whatsappUrl = `https://wa.me/${whatsappPhoneNumber}?text=${prefilledText}`;
             window.open(whatsappUrl, '_blank');
         }
     </script>
+
 </body>
 </html>
