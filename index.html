@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,74 +27,7 @@
             --dark-green-footer: #0A3D0A; /* Nuevo color: Verde Oscuro para el pie de página */
             --footer-text-light: #F0F0F0; /* Color de texto claro para el pie de página */
         }
-.review-section {
-  font-family: sans-serif;
-}
 
-.review-section p {
-  margin: 10px 0;
-}
-
-.review-form {
-  margin-top: 10px;
-}
-
-.review-form label {
-  display: block;
-  margin-top: 10px;
-}
-
-.review-form textarea,
-.review-form input[type="text"],
-.review-form input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.stars {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-}
-
-.stars input {
-  display: none;
-}
-
-.stars label {
-  font-size: 24px;
-  color: #ccc;
-  cursor: pointer;
-  margin: 0 2px;
-}
-
-.stars input:checked ~ label,
-.stars label:hover,
-.stars label:hover ~ label {
-  color: #4caf50;
-}
-
-.remember {
-  margin-top: 15px;
-  font-size: 14px;
-}
-
-.review-form button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 15px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.review-form button:hover {
-  background-color: #43a047;
-}
         body {
             margin: 0;
             padding: 0;
@@ -109,7 +41,7 @@
             max-width: 960px;
             margin: 40px auto 20px auto; /* Ajuste margen inferior */
             padding: 40px;
-            background: var(--secondary-color); /* CAMBIO: Fondo verde esmeralda */
+            background: #fff;
             box-shadow: var(--shadow-light);
             border-radius: var(--border-radius);
             position: relative; /* Asegura que z-index funcione en nav si fuera necesario */
@@ -137,7 +69,7 @@
 
         header nav a, .dropbtn {
             font-weight: 600;
-            color: white; /* CAMBIO: Texto de enlaces blanco para contraste con el fondo verde */
+            color: var(--secondary-color); /* CAMBIO: Enlaces de navegación a color verde */
             text-decoration: none;
             padding: 10px 15px;
             transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
@@ -146,21 +78,21 @@
         }
 
         header nav a:hover, .dropbtn:hover {
-            color: var(--secondary-color); /* CAMBIO: Texto verde al pasar el ratón */
-            background-color: white; /* CAMBIO: Fondo blanco al pasar el ratón */
+            color: white; /* CAMBIO: Texto blanco al pasar el ratón sobre el enlace verde */
+            background-color: var(--secondary-color); /* CAMBIO: Fondo verde al pasar el ratón */
             transform: translateY(-2px);
         }
 
         h1 {
             text-align: center;
-            color: white; /* CAMBIO: Título H1 "PORTAL DE VENTAS" a blanco */
+            color: var(--secondary-color); /* CAMBIO: Título H1 "PORTAL DE VENTAS" a color verde */
             margin-top: 0;
             font-size: 2.5em;
             letter-spacing: -0.5px;
         }
 
-        h1 span { /* Asegura que "VERDE VITAL" dentro del H1 se mantenga blanco */
-            color: white;
+        h1 span { /* Asegura que "VERDE VITAL" dentro del H1 se mantenga verde si ya lo estaba */
+            color: var(--secondary-color);
         }
 
 
@@ -907,7 +839,205 @@
 
         /* Estilos para el select de métodos de pago */
         #payment-method-select {
-            width
+            width: 100%;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            background-color: #f9f9f9;
+            appearance: none; /* Elimina estilos por defecto del select */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230077cc%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.8H18.6c-5%200-9.3%201.8-12.9%205.5-3.6%203.7-5.4%208.5-5.4%2014.1%200%205.7%201.8%2010.5%205.4%2014.1l127.3%20128.8c3.7%203.7%208.5%205.5%2014.1%205.5s10.5-1.8%2014.1-5.5L287%20101.9c3.6-3.7%205.4-8.5%205.4-14.1%200-5.7-1.8-10.5-5.4-14.1z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+            cursor: pointer;
+            outline: none;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #payment-method-select:focus {
+            border-color: var(--main-color);
+            box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.2);
+        }
+        
+        /* Estilos para el buscador */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        }
+
+        #productSearch {
+            padding: 12px 20px;
+            border: 2px solid var(--secondary-color);
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #productSearch:focus {
+            border-color: var(--main-color);
+            box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.2);
+            outline: none;
+        }
+
+        #searchButton {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #searchButton:hover {
+            background-color: var(--whatsapp-green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Estilo para resaltar productos */
+        .product-item.highlight {
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+            transform: scale(1.02);
+            transition: all 0.3s ease-in-out;
+            animation: pulse-highlight 1.5s infinite alternate; /* Animación de pulsación */
+        }
+
+        @keyframes pulse-highlight {
+            from {
+                box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+            }
+            to {
+                box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+            }
+        }
+
+
+        /* MEDIA QUERIES PARA RESPONSIVIDAD */
+        @media (max-width: 768px) {
+            header, main, footer {
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header nav a, .dropbtn {
+                padding: 8px 10px;
+                font-size: 0.95em;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .product-item, .info-block { /* Asegura que info-block también sea responsivo */
+                padding: 20px;
+            }
+
+            .sub-detail-section {
+                padding: 15px;
+            }
+
+            .cart-icon {
+                top: 15px;
+                right: 20px;
+                padding: 10px 13px;
+                font-size: 0.9em;
+            }
+
+            .shopping-cart-content {
+                width: 95%;
+                padding: 20px;
+            }
+
+            #cart-items-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 0;
+            }
+
+            .cart-item-actions {
+                margin-top: 10px;
+                justify-content: flex-end;
+                width: 100%;
+            }
+
+            /* WhatsApp Widget Responsivo */
+            .whatsapp-widget {
+                width: 90%;
+                max-width: 300px;
+                right: 5%;
+                bottom: 20px;
+            }
+
+            #snackbar {
+                min-width: unset; /* Reinicia el ancho mínimo */
+                width: 90%; /* Ocupa el 90% del ancho */
+                margin-left: -45%; /* Centra */
+                left: 50%;
+            }
+            .search-container {
+                flex-direction: column; /* Apila el input y el botón en pantallas pequeñas */
+                gap: 15px;
+            }
+            #productSearch {
+                max-width: 100%; /* El input ocupa todo el ancho disponible */
+            }
+            #searchButton {
+                width: 100%; /* El botón ocupa todo el ancho disponible */
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body id="top">
+
+    <div id="entranceDoor" class="entrance-door">
+        <h2>PORTAL DE VENTAS</h2>
+        <span class="brand-name">VERDE VITAL</span>
+        <button id="enterButton">ENTRAR</button>
+    </div>
+
+    <div id="mainContent" class="content-hidden">
+        <header>
+            <nav>
+                <a href="#top">Inicio</a>
+                <a href="#oportunidad-section">Oportunidad de Negocio</a>
+                <a href="#atomy-products-section">Otros Productos</a>
+            </nav>
+            <h1>PORTAL DE VENTAS <br> <span style="color: var(--secondary-color);">VERDE VITAL</span></h1>
+
+            <div class="search-container">
+                <input type="search" id="productSearch" placeholder="Busca tu producto (ej. Protec Life)">
+                <button id="searchButton"><i class="fas fa-search"></i> Buscar Producto</button>
+            </div>
+        </header>
 
         <section class="info-block" style="max-width: 960px; margin: 20px auto;">
             <h2>Información Relevante y Productos Destacados</h2>
@@ -918,8 +1048,7 @@
                     <span class="arrow">▼</span>
                 </div>
                 <div id="why-lifehuni" class="sub-detail-content">
-                    <p>Los productos LifeHuni
-                        son de origen vegetal y ricos en vitaminas. Estos suplementos no contienen productos químicos potencialmente peligrosos. Cada componente natural se obtiene de cultivos ecológicos y sostenibles, siendo amigables con el medio ambiente y garantizando la más alta calidad.</p>
+                    <p>Los productos **LifeHuni** son de **origen vegetal y ricos en vitaminas**. Estos suplementos no contienen productos químicos potencialmente peligrosos. Cada componente natural se obtiene de **cultivos ecológicos y sostenibles**, siendo amigables con el medio ambiente y garantizando la más alta calidad.</p>
                 </div>
             </div>
 
@@ -929,19 +1058,13 @@
                     <span class="arrow">▼</span>
                 </div>
                 <div id="care-immune-system" class="sub-detail-content">
-                    <p>Para cuidar el sistema inmunológico, es fundamental mantener hábitos saludables. De ello depende que nuestro cuerpo esté preparado y en mejor condición para contrarrestar las enfermedades que podamos contraer. Dentro de las recomendaciones que puedes seguir, se encuentran:</p>
+                    <p>Para cuidar el sistema inmunológico, es fundamental mantener **hábitos saludables**. De ello depende que nuestro cuerpo esté preparado y en mejor condición para contrarrestar las enfermedades que podamos contraer. Dentro de las recomendaciones que puedes seguir, se encuentran:</p>
                     <ul>
-                        <li>Hacer ejercicio:
-                            Mantener una vida física activa, incluso practicar algún deporte que mantenga tu cuerpo en movimiento.</li>
-                        <li>Beber suficiente agua:
-                            Mantenerse hidratado es clave.</li>
-                        <li>Dormir lo suficiente:
-                            Un cuerpo descansado funciona mejor.</li>
-                        <li>Evitar alcohol y tabaco:
-                            Reducir o eliminar el consumo de estas sustancias.</li>
-                        <li>Alimentación balanceada:
-                            Puedes suplementarla con Protect Life
-                            para mejorar la salud del sistema inmunológico.</li>
+                        <li>**Hacer ejercicio:** Mantener una vida física activa, incluso practicar algún deporte que mantenga tu cuerpo en movimiento.</li>
+                        <li>**Beber suficiente agua:** Mantenerse hidratado es clave.</li>
+                        <li>**Dormir lo suficiente:** Un cuerpo descansado funciona mejor.</li>
+                        <li>**Evitar alcohol y tabaco:** Reducir o eliminar el consumo de estas sustancias.</li>
+                        <li>**Alimentación balanceada:** Puedes suplementarla con **Protect Life** para mejorar la salud del sistema inmunológico.</li>
                     </ul>
                 </div>
             </div>
@@ -953,27 +1076,16 @@
                 </div>
                 <div id="related-products-summary" class="sub-detail-content">
                     <ul>
-                        <li>Divi Her:
-                            Suplemento dietario que promueve la pérdida de peso, ayuda a controlar el apetito y la ansiedad por comer. Facilita la eliminación de grasa corporal a través de lipólisis.</li>
-                        <li>Jufres:
-                            Protege nuestra piel de los rayos solares, disminuye efectos del envejecimiento, combate la flacidez de la piel en cuello y rostro, mejora la cicatrización de heridas y fortalece el cabello, piel y uñas.</li>
-                        <li>Life Dig:
-                            Mejora el sistema digestivo, ayuda con el estreñimiento crónico, regula los niveles de colesterol y azúcar en la sangre, y combate infecciones digestivas.</li>
-                        <li>Libi Life:
-                            Mejora la salud sexual y reproductora. Funciona como energizante, antidepresivo natural, optimiza el rendimiento en deportistas, mejora la memoria y la salud sexual.</li>
-                        <li>Protect Life:
-                            Mejora el sistema inmunológico, regula el funcionamiento intestinal, ayuda a prevenir el envejecimiento, ayuda en la prevención de algunos tumores y disminuye el acné.</li>
-                        <li>Ju Vent:
-                            Disminuye la inflamación y rigidez, ayuda a cicatrizar heridas, fortalece y recupera el cuerpo después de hacer ejercicio, ayuda en órganos como piel, tendones y cartílagos, y ayuda a formar las células sanguíneas.</li>
-                        <li>Maca Life:
-                            Ayuda a regular el ciclo menstrual, regula los niveles de testosterona, fortalece el sistema óseo e inmunológico, facilita la digestión de las grasas y regula el colesterol.</li>
-                        <li>Vid Life:
-                            Disminuye el estreñimiento, es depurador de la sangre y reparador de la piel, incrementa el vigor y ayuda al balance hormonal, y mejora el funcionamiento de los músculos.</li>
-                        <li>Agy Fort:
-                            Producto recomendado para niños, adolescentes
-                            y especialmente personas que practican deportes o desarrollan actividades físicas extenuantes. En general, para personas sanas que desean mejorar su nutrición.</li>
-                        <li>Gravi Life:
-                            Indicado para todo el sistema nervioso e inmunológico, es coadyuvante para tratamiento de cáncer, dolores en general y de articulaciones.</li>
+                        <li>**Divi Her:** Suplemento dietario que promueve la **pérdida de peso**, ayuda a controlar el apetito y la ansiedad por comer. Facilita la eliminación de grasa corporal a través de lipólisis.</li>
+                        <li>**Jufres:** Protege nuestra piel de los **rayos solares**, disminuye efectos del envejecimiento, combate la flacidez de la piel en cuello y rostro, mejora la cicatrización de heridas y fortalece el cabello, piel y uñas.</li>
+                        <li>**Life Dig:** Mejora el **sistema digestivo**, ayuda con el estreñimiento crónico, regula los niveles de colesterol y azúcar en la sangre, y combate infecciones digestivas.</li>
+                        <li>**Libi Life:** Mejora la **salud sexual y reproductora**. Funciona como energizante, antidepresivo natural, optimiza el rendimiento en deportistas, mejora la memoria y la salud sexual.</li>
+                        <li>**Protect Life:** Mejora el **sistema inmunológico**, regula el funcionamiento intestinal, ayuda a prevenir el envejecimiento, ayuda en la prevención de algunos tumores y disminuye el acné.</li>
+                        <li>**Ju Vent:** Disminuye la **inflamación y rigidez**, ayuda a cicatrizar heridas, fortalece y recupera el cuerpo después de hacer ejercicio, ayuda en órganos como piel, tendones y cartílagos, y ayuda a formar las células sanguíneas.</li>
+                        <li>**Maca Life:** Ayuda a **regular el ciclo menstrual**, regula los niveles de testosterona, fortalece el sistema óseo e inmunológico, facilita la digestión de las grasas y regula el colesterol.</li>
+                        <li>**Vid Life:** Disminuye el **estreñimiento**, es depurador de la sangre y reparador de la piel, incrementa el vigor y ayuda al balance hormonal, y mejora el funcionamiento de los músculos.</li>
+                        <li>**Agy Fort:** Producto recomendado para **niños, adolescentes** y especialmente personas que practican deportes o desarrollan actividades físicas extenuantes. En general, para personas sanas que desean mejorar su nutrición.</li>
+                        <li>**Gravi Life:** Indicado para todo el **sistema nervioso e inmunológico**, es coadyuvante para tratamiento de cáncer, dolores en general y de articulaciones.</li>
                     </ul>
                 </div>
             </div>
@@ -1012,16 +1124,11 @@
                     </p>
                     <h4>¿Por qué unirte a nosotros?</h4>
                     <ul>
-                        <li>Productos de Impacto:
-                            Ofrece soluciones de salud y bienestar que tus clientes amarán.</li>
-                        <li>Flexibilidad Total:
-                            Trabaja a tu propio ritmo, desde donde quieras y cuando quieras.</li>
-                        <li>Ingresos Ilimitados:
-                            Tu esfuerzo se traduce directamente en tus ganancias.</li>
-                        <li>Soporte y Capacitación:
-                            Te proporcionamos todas las herramientas y el conocimiento necesario para que tengas éxito.</li>
-                        <li>Comunidad:
-                            Forma parte de una red de emprendedores apasionados por el bienestar.</li>
+                        <li>**Productos de Impacto:** Ofrece soluciones de salud y bienestar que tus clientes amarán.</li>
+                        <li>**Flexibilidad Total:** Trabaja a tu propio ritmo, desde donde quieras y cuando quieras.</li>
+                        <li>**Ingresos Ilimitados:** Tu esfuerzo se traduce directamente en tus ganancias.</li>
+                        <li>**Soporte y Capacitación:** Te proporcionamos todas las herramientas y el conocimiento necesario para que tengas éxito.</li>
+                        <li>**Comunidad:** Forma parte de una red de emprendedores apasionados por el bienestar.</li>
                     </ul>
                     <p>
                        ¡Es tu momento de tomar el control de tu futuro! Haz clic en el botón de abajo para más información y descubre cómo Verde Vital puede transformar tu vida.
@@ -1101,12 +1208,9 @@
                         <div id="libi-life-presentations" class="sub-detail-content">
                             <p>Disponible en:</p>
                             <ul>
-                                <li>Botellas PET:
-                                    Para 10, 20, 30, 50, 60, 90, 100, 120, 200 y 500 unidades de cápsulas (varios colores de plástico y tapas).</li>
-                                <li>Blíster (Aluminio / PVC):
-                                    Para 1, 2, 5, 10, 15, 20, 30 cápsulas.</li>
-                                <li>Sachet (Polipropileno Orientado):
-                                    Para 1, 2, 5, 10, 15, 20 y 30 cápsulas.</li>
+                                <li>**Botellas PET:** Para 10, 20, 30, 50, 60, 90, 100, 120, 200 y 500 unidades de cápsulas (varios colores de plástico y tapas).</li>
+                                <li>**Blíster (Aluminio / PVC):** Para 1, 2, 5, 10, 15, 20, 30 cápsulas.</li>
+                                <li>**Sachet (Polipropileno Orientado):** Para 1, 2, 5, 10, 15, 20 y 30 cápsulas.</li>
                             </ul>
                         </div>
                     </div>
@@ -1309,33 +1413,25 @@
                         </div>
                         <div id="protec-life-description" class="sub-detail-content">
                             <p><strong>PROTEC-LIFE</strong> es un suplemento alimenticio natural diseñado para potenciar tu bienestar general. Viene en polvo, ideal para una fácil preparación.</p>
-                            <p>¿Para qué sirve PROTEC-LIFE?</p>
+                            <p>¿Para qué sirve **PROTEC-LIFE**?</p>
                             <ul>
-                                <li>Aumenta la eficiencia del intestino para absorber nutrientes.</li>
-                                <li>Contiene Lactoferrina, una proteína con propiedades antivirales, antibacterianas y antiinflamatorias.</li>
-                                <li>Brinda efectos terapéuticos
-                                    en casos de cáncer, VIH, Citomegalovirus y herpes.</li>
-                                <li>Previene el Síndrome de fatiga crónica
-                                    e infecciones.</li>
-                                <li>Acelera la cicatrización de los tejidos.</li>
-                                <li>Disminuye el envejecimiento
-                                    gracias a su potente acción antioxidante.</li>
-                                <li>Protege contra la radiación solar.</li>
-                                <li>Ayuda al buen funcionamiento del hígado.</li>
-                                <li>Reduce la posibilidad de sangrados.</li>
+                                <li>Aumenta la eficiencia del intestino para **absorber nutrientes**.</li>
+                                <li>Contiene **Lactoferrina**, una proteína con propiedades antivirales, antibacterianas y antiinflamatorias.</li>
+                                <li>Brinda **efectos terapéuticos** en casos de cáncer, VIH, Citomegalovirus y herpes.</li>
+                                <li>Previene el **Síndrome de fatiga crónica** e infecciones.</li>
+                                <li>Acelera la **cicatrización de los tejidos**.</li>
+                                <li>Disminuye el **envejecimiento** gracias a su potente acción antioxidante.</li>
+                                <li>Protege contra la **radiación solar**.</li>
+                                <li>Ayuda al buen funcionamiento del **hígado**.</li>
+                                <li>Reduce la posibilidad de **sangrados**.</li>
                             </ul>
-                            <p>¿Qué contiene PROTEC-LIFE?</p>
+                            <p>¿Qué contiene **PROTEC-LIFE**?</p>
                             <ul>
-                                <li>Vitaminas:
-                                    A, C, D, E, K y todo el complejo B (B1, B3, B5, B6, B7, B9 y B12).</li>
-                                <li>Minerales esenciales:
-                                    Calcio, Cobre, Cromo, Fósforo, Hierro, Magnesio, Manganeso, Molibdeno, Potasio, Selenio, Sodio y Zinc.</li>
-                                <li>Componentes bioactivos:
-                                    Calostro Bovino, Lactoferrina, Lisozima del calostro, Lactoperoxidasas.</li>
-                                <li>Fibras y proteínas:
-                                    Fibra de avena, Proteína de soya y proteína de suero de leche.</li>
-                                <li>Otros nutrientes clave:
-                                    Estevia, Betaglucan, Fructosa, Aceite de canola, Cisteína, Carnitina, Arginina, Inositol y Colina.</li>
+                                <li>**Vitaminas:** A, C, D, E, K y todo el complejo B (B1, B3, B5, B6, B7, B9 y B12).</li>
+                                <li>**Minerales esenciales:** Calcio, Cobre, Cromo, Fósforo, Hierro, Magnesio, Manganeso, Molibdeno, Potasio, Selenio, Sodio y Zinc.</li>
+                                <li>**Componentes bioactivos:** Calostro Bovino, Lactoferrina, Lisozima del calostro, Lactoperoxidasas.</li>
+                                <li>**Fibras y proteínas:** Fibra de avena, Proteína de soya y proteína de suero de leche.</li>
+                                <li>**Otros nutrientes clave:** Estevia, Betaglucan, Fructosa, Aceite de canola, Cisteína, Carnitina, Arginina, Inositol y Colina.</li>
                             </ul>
                             <p>Presentación: Frasco por 500 Gr.</p>
                             <p>Fabricado en Colombia.</p>
@@ -1845,7 +1941,7 @@
             </section>
 
             <section class="product-item" id="reglu-section">
-                <h3>REGLU 60</h3>
+                <h3>REGLU 60 CAP</h3>
                 <img src="https://i.postimg.cc/FHWjgPsF/Reglu-scaled.jpg" alt="REGLU 60 CAP" loading="lazy">
                 <button class="toggle-btn" onclick="toggleDetails('reglu-details', this)">🔽 Ver más detalles</button>
                 <button class="add-to-cart-btn"
@@ -1864,38 +1960,19 @@
                             <span class="arrow">▼</span>
                         </div>
                         <div id="reglu-description" class="sub-detail-content">
-                          
-                            <p>𝐕𝐀𝐋𝐀𝐍𝐂𝐄, 𝐕𝐈𝐓𝐀𝐋𝐈𝐃𝐀𝐃 𝐘 𝐂𝐎𝐍𝐓𝐑𝐎𝐋</p>
-                            <p>Suplemento 100% natural que gracias a la combinación de sus componentes nos brinda beneficios en salud, tales como:</p>
-                            <p>Regula la glucosa.</p>
-                            <p>Ayuda a mantener estables los niveles de azúcar en la sangre, lo que es crucial para prevenir picos y caídas bruscas.</p>
-                            <p>Mejora la sensibilidad a la insulina, lo que permite que el cuerpo use la glucosa de manera mas eficiente.</p>
-                            <p>Regula la glucosa</p>
-                            <p>Ayuda a mantener estables los niveles de azúcar en la sangre, lo que es crucial para prevenir picos y caídas bruscas.</p>
-                            <p>Mejora la sensibilidad a la insulina, lo que permite que el cuerpo use la glucosa de manera mas eficiente.</p>
-                            <p>Reduce el riesgo de desarrollar diabetes tipo 2.</p>
-                            <p>Favorece la digestión y metabolización de los carbohidratos, reduciendo la acumulación de glucosa en la sangre.</p>
-                            <p>Ayuda a prevenir niveles elevados de azúcar en la sangre.</p>
-                            <p>𝐏𝐑𝐈𝐍𝐂𝐈𝐏𝐀𝐋𝐄𝐒 𝐂𝐎𝐌𝐏𝐎𝐍𝐄𝐍𝐓𝐄𝐒</p>
-                            <li>Yacón</li>
-                            <li>Cromo</li>
-                            <li>Vitamina B1</li>
-                            <li>Avicel</li>
-                            <li>Estearato de magnesio</li>
+                            <p>REGLU 60 CAP es un suplemento dietario.</p>
+                            <p>Contenido Neto: 60 cápsulas.</p>
+                            <p>Fabricado en Colombia.</p>
                         </div>
                     </div>
 
                     <div class="sub-detail-section">
                         <div class="sub-detail-header" onclick="toggleSubDetails('reglu-invima', this)">
                             <span>Registro INVIMA</span>
-                            
                             <span class="arrow">▼</span>
                         </div>
                         <div id="reglu-invima" class="sub-detail-content">
-                            
-                         <p>Fabricado en Colombia.</p>
-                        <p>Registro INVIMA N°. SD2024-0004813</p>
-
+                            <p>Registro INVIMA N°. SD2024-0004813</p>
                         </div>
                     </div>
 
@@ -1905,9 +1982,7 @@
                             <span class="arrow">▼</span>
                         </div>
                         <div id="reglu-ficha" class="sub-detail-content">
-                           
-                            <p>¿𝐏𝐎𝐑𝐐𝐔𝐄 𝐄𝐋𝐄𝐆𝐈𝐑 𝐋𝐎𝐒 𝐒𝐔𝐏𝐋𝐄𝐌𝐄𝐍𝐓𝐎𝐒 𝐃𝐄 𝐋𝐈𝐅𝐄𝐇𝐔𝐍𝐈?</p>
-                            <p>Nuestros complementos alimenticios son productos elaborados con nutrientes, que están destinados a suministrar elementos esenciales a nuestro organismo para la realización de sus funciones, en la mayoría de personas estos nutrientes son pobremente incorporados a través de la dieta usual.</p>
+                            <p>Aquí irá la información técnica detallada del producto REGLU 60 CAP.</p>
                         </div>
                     </div>
 
@@ -2068,16 +2143,11 @@
                                 <span class="arrow">▼</span>
                             </div>
                             <div id="atomy-pasta-dental-benefits" class="sub-detail-content"> <ul>
-                                    <li>Prevención de caries:
-                                        Ayuda a combatir las bacterias que causan la caries.</li>
-                                    <li>Aliento fresco:
-                                        Proporciona una sensación duradera de frescura.</li>
-                                    <li>Cuidado de encías:
-                                        Contribuye a mantener las encías saludables.</li>
-                                    <li>Eliminación de placa:
-                                        Efectiva en la remoción de la placa bacteriana.</li>
-                                    <li>Blancura natural:
-                                        Ayuda a mantener el color natural de los dientes.</li>
+                                    <li>**Prevención de caries:** Ayuda a combatir las bacterias que causan la caries.</li>
+                                    <li>**Aliento fresco:** Proporciona una sensación duradera de frescura.</li>
+                                    <li>**Cuidado de encías:** Contribuye a mantener las encías saludables.</li>
+                                    <li>**Eliminación de placa:** Efectiva en la remoción de la placa bacteriana.</li>
+                                    <li>**Blancura natural:** Ayuda a mantener el color natural de los dientes.</li>
                                 </ul>
                             </div>
                         </div>
@@ -2131,14 +2201,10 @@
                             </div>
                             <div id="atomy-espuma-limpiadora-benefits" class="sub-detail-content">
                                 <ul>
-                                    <li>Limpieza profunda:
-                                        Elimina maquillaje, sebo y suciedad incrustada.</li>
-                                    <li>Hidratación:
-                                        No reseca la piel, dejándola suave.</li>
-                                    <li>Ingredientes naturales:
-                                        Formulado con aceites vegetales nutritivos.</li>
-                                    <li>Para todo tipo de piel:
-                                        Suave y efectivo incluso en pieles sensibles.</li>
+                                    <li>**Limpieza profunda:** Elimina maquillaje, sebo y suciedad incrustada.</li>
+                                    <li>**Hidratación:** No reseca la piel, dejándola suave.</li>
+                                    <li>**Ingredientes naturales:** Formulado con aceites vegetales nutritivos.</li>
+                                    <li>**Para todo tipo de piel:** Suave y efectivo incluso en pieles sensibles.</li>
                                 </ul>
                             </div>
                         </div>
@@ -2168,37 +2234,6 @@
             </main>
 
         <footer>
-            <section class="review-section" style="margin-top: 30px;">
-  <h2>Testimonios y Reseñas</h2>
-  <p>No hay valoraciones aún.</p>
-
-  <form class="review-form">
-    <p>Tu puntuación</p>
-    <div class="stars">
-      <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
-      <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
-      <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
-      <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
-      <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
-    </div>
-
-    <label for="review">Tu valoración *</label>
-    <textarea id="review" required></textarea>
-
-    <label for="name">Nombre *</label>
-    <input type="text" id="name" required>
-
-    <label for="email">Correo electrónico *</label>
-    <input type="email" id="email" required>
-
-    <div class="remember">
-      <input type="checkbox" id="remember">
-      <label for="remember">Guardar mi nombre, correo electrónico y web en este navegador para la próxima vez que comente.</label>
-    </div>
-
-    <button type="submit">ENVIAR</button>
-  </form>
-</section>
             <p>Todos los derechos reservados &copy; 2025</p>
             <p>Página Original & Auténtica</p>
             <p>Contacto: <a href="mailto:Elbacansoyo@gmail.com">Elbacansoyo@gmail.com</a> | Teléfono: 3005465576</p>
