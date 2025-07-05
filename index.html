@@ -1,4 +1,5 @@
-<!DOCTYPE html> 
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -108,7 +109,7 @@
             max-width: 960px;
             margin: 40px auto 20px auto; /* Ajuste margen inferior */
             padding: 40px;
-            background: #fff;
+            background: var(--secondary-color); /* CAMBIO: Fondo verde esmeralda */
             box-shadow: var(--shadow-light);
             border-radius: var(--border-radius);
             position: relative; /* Asegura que z-index funcione en nav si fuera necesario */
@@ -136,7 +137,7 @@
 
         header nav a, .dropbtn {
             font-weight: 600;
-            color: var(--secondary-color); /* CAMBIO: Enlaces de navegación a color verde */
+            color: white; /* CAMBIO: Texto de enlaces blanco para contraste con el fondo verde */
             text-decoration: none;
             padding: 10px 15px;
             transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
@@ -145,21 +146,21 @@
         }
 
         header nav a:hover, .dropbtn:hover {
-            color: white; /* CAMBIO: Texto blanco al pasar el ratón sobre el enlace verde */
-            background-color: var(--secondary-color); /* CAMBIO: Fondo verde al pasar el ratón */
+            color: var(--secondary-color); /* CAMBIO: Texto verde al pasar el ratón */
+            background-color: white; /* CAMBIO: Fondo blanco al pasar el ratón */
             transform: translateY(-2px);
         }
 
         h1 {
             text-align: center;
-            color: var(--secondary-color); /* CAMBIO: Título H1 "PORTAL DE VENTAS" a color verde */
+            color: white; /* CAMBIO: Título H1 "PORTAL DE VENTAS" a blanco */
             margin-top: 0;
             font-size: 2.5em;
             letter-spacing: -0.5px;
         }
 
-        h1 span { /* Asegura que "VERDE VITAL" dentro del H1 se mantenga verde si ya lo estaba */
-            color: var(--secondary-color);
+        h1 span { /* Asegura que "VERDE VITAL" dentro del H1 se mantenga blanco */
+            color: white;
         }
 
 
@@ -906,204 +907,7 @@
 
         /* Estilos para el select de métodos de pago */
         #payment-method-select {
-            width: 100%;
-            padding: 10px 15px;
-            margin-top: 15px;
-            border: 1px solid #ccc;
-            border-radius: var(--border-radius);
-            font-size: 1em;
-            background-color: #f9f9f9;
-            appearance: none; /* Elimina estilos por defecto del select */
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%230077cc%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.8H18.6c-5%200-9.3%201.8-12.9%205.5-3.6%203.7-5.4%208.5-5.4%2014.1%200%205.7%201.8%2010.5%205.4%2014.1l127.3%20128.8c3.7%203.7%208.5%205.5%2014.1%205.5s10.5-1.8%2014.1-5.5L287%20101.9c3.6-3.7%205.4-8.5%205.4-14.1%200-5.7-1.8-10.5-5.4-14.1z%22%2F%3E%3C%2Fsvg%3E');
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 1em;
-            cursor: pointer;
-            outline: none;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #payment-method-select:focus {
-            border-color: var(--main-color);
-            box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.2);
-        }
-        
-        /* Estilos para el buscador */
-        .search-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-        }
-
-        #productSearch {
-            padding: 12px 20px;
-            border: 2px solid var(--secondary-color);
-            border-radius: var(--border-radius);
-            font-size: 1em;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #productSearch:focus {
-            border-color: var(--main-color);
-            box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.2);
-            outline: none;
-        }
-
-        #searchButton {
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        #searchButton:hover {
-            background-color: var(--whatsapp-green-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        /* Estilo para resaltar productos */
-        .product-item.highlight {
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
-            transform: scale(1.02);
-            transition: all 0.3s ease-in-out;
-            animation: pulse-highlight 1.5s infinite alternate; /* Animación de pulsación */
-        }
-
-        @keyframes pulse-highlight {
-            from {
-                box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
-            }
-            to {
-                box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
-            }
-        }
-
-
-        /* MEDIA QUERIES PARA RESPONSIVIDAD */
-        @media (max-width: 768px) {
-            header, main, footer {
-                margin: 20px auto;
-                padding: 20px;
-            }
-
-            header nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            header nav a, .dropbtn {
-                padding: 8px 10px;
-                font-size: 0.95em;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            .product-item, .info-block { /* Asegura que info-block también sea responsivo */
-                padding: 20px;
-            }
-
-            .sub-detail-section {
-                padding: 15px;
-            }
-
-            .cart-icon {
-                top: 15px;
-                right: 20px;
-                padding: 10px 13px;
-                font-size: 0.9em;
-            }
-
-            .shopping-cart-content {
-                width: 95%;
-                padding: 20px;
-            }
-
-            #cart-items-list li {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 10px 0;
-            }
-
-            .cart-item-actions {
-                margin-top: 10px;
-                justify-content: flex-end;
-                width: 100%;
-            }
-
-            /* WhatsApp Widget Responsivo */
-            .whatsapp-widget {
-                width: 90%;
-                max-width: 300px;
-                right: 5%;
-                bottom: 20px;
-            }
-
-            #snackbar {
-                min-width: unset; /* Reinicia el ancho mínimo */
-                width: 90%; /* Ocupa el 90% del ancho */
-                margin-left: -45%; /* Centra */
-                left: 50%;
-            }
-            .search-container {
-                flex-direction: column; /* Apila el input y el botón en pantallas pequeñas */
-                gap: 15px;
-            }
-            #productSearch {
-                max-width: 100%; /* El input ocupa todo el ancho disponible */
-            }
-            #searchButton {
-                width: 100%; /* El botón ocupa todo el ancho disponible */
-                justify-content: center;
-            }
-        }
-    </style>
-</head>
-<body id="top">
-
-    <div id="entranceDoor" class="entrance-door">
-        <span class="brand-name">VERDE VITAL</span>
-        <button id="enterButton">ENTRAR</button>
-    </div>
-
-    <div id="mainContent" class="content-hidden">
-        <header>
-            <nav>
-                <a href="#top">Inicio</a>
-                <a href="#oportunidad-section">Oportunidad de Negocio</a>
-                <a href="#atomy-products-section">Otros Productos</a>
-            </nav>
-            <h1><br> <span style="color: var(--secondary-color);">VERDE VITAL</span></h1>
-
-            <div class="search-container">
-                <input type="search" id="productSearch" placeholder="Busca tu producto">
-                <button id="searchButton"><i class="fas fa-search"></i> Buscar Producto</button>
-            </div>
-        </header>
+            width
 
         <section class="info-block" style="max-width: 960px; margin: 20px auto;">
             <h2>Información Relevante y Productos Destacados</h2>
